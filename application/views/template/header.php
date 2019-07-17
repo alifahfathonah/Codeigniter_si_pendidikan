@@ -36,6 +36,12 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="<?= base_url()?>assets/css/themes/all-themes.css" rel="stylesheet" />
+
+    <!-- Bootstrap Tagsinput Css -->
+    <link href="<?= base_url()?>assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+
+    <!-- Bootstrap Select Css -->
+    <link href="<?= base_url()?>assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
 </head>
 
 <body class="theme-blue">
@@ -140,7 +146,7 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="<?= $pegawai;?>">
+                    <li class="<?= $pegawai1;?>">
                         <a href="<?= base_url();?>pegawai">
                             <i class="material-icons">people</i>
                             <span>Kepegawaian </span>

@@ -14,7 +14,7 @@ class Home extends CI_Controller {
 	public function index(){
 		$data=[
 			'dashboard' => 'active',
-			'pegawai' => ''
+			'pegawai1' => ''
 		];
 		
 		$this->load->view('template/header',$data);
