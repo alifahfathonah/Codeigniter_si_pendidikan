@@ -58,6 +58,12 @@ class Home extends CI_Controller {
 					$this->load->view('home',$data);
 					$this->load->view('filter/pbud',$data);
 					$this->load->view('template/footer');
+				}elseif($header == 'III. Sekolah Taman Kanak-Kanak*'){
+					$data['usia']=$this->M_home->cariDataSTK();
+					$this->load->view('template/header',$data);
+					$this->load->view('home',$data);
+					$this->load->view('filter/stk',$data);
+					$this->load->view('template/footer');
 				}else{
 					$this->load->view('template/header',$data);
 					$this->load->view('home',$data);
