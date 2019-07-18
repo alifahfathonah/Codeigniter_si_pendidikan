@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V16</title>
+	<title>Sistem Informasi Pendidikan Morowali</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="<?= base_url();?>assets/images/morowali.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url();?>assets/login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -30,10 +30,11 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('<?= base_url();?>assets/login/images/bg-01.jpg');">
+		<div class="container-login100" style="background-image: url('<?= base_url();?>assets/images/morowal3.png');">
 			<div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
-					Account Login
+					<img src="<?= base_url();?>assets/images/morowali.png" width="25%" alt="" srcset=""><br>
+					SISTEM INFORMASI PENDIDIKAN MOROWALI
 				</span>
 				<form class="login100-form validate-form p-b-33 p-t-5" method="post">
 

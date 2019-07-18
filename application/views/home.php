@@ -52,16 +52,147 @@
                 </div>
             </div>
             <!-- #END# Widgets -->
-            <!-- Exportable Table -->
-            <!-- <div class="row clearfix">
+            <!-- Content -->
+            <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
-                        <div class="body">
+                        <div class="header">
+                            <h2>
+                                Data Pendidikan Kabupaten Morowali
+                                <!-- <small>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</small> -->
+                            </h2>
+                            <hr>
+                            <form method="post" action="">
+                                <div class="row clearfix">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <select class="form-control show-tick" name="header">
+                                                    <option>Header</option>
+                                                    <?php foreach($header as $h):?>
+                                                        <option value="<?= $h;?>"><?= $h;?></option>
+                                                    <?php endforeach;?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <select class="form-control show-tick" name="kecamatan">
+                                                    <option>Kecamatan</option>
+                                                    <?php foreach($kec as $k):?>
+                                                        <option value="<?= $k;?>"><?= $k;?></option>
+                                                    <?php endforeach;?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <select class="form-control show-tick" name="tahun">
+                                                    <option>Tahun</option>
+                                                    <?php foreach($tahun as $t):?>
+                                                        <option value="<?= $t;?>"><?= $t;?></option>
+                                                    <?php endforeach;?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <button type="button" class="btn btn-primary btn-lg m-l-15 waves-effect">Cari</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul> -->
+                        </div>
+                        <div class="body table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                        <th width="3%">No</th>
+                                        <th colspan="7" width="50%">Nama</th>
+                                        <th width="10%">Nilai</th>
+                                        <th width="10%">Satuan</th>
+                                        <th width="20%">Sumber Data</th>
+                                        <th width="7%">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td align="center">1</td>
+                                            <td colspan="11"><b>I. Penduduk Berdasarkan Usia Sekolah*</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">2</td>
+                                            <td width="1%">&nbsp;</td>
+                                            <td colspan="6">1. Jumlah Penduduk Usia 0-6 Tahun** </td>
+                                            <td align="right"><b>23935</b></td>
+                                            <td>Orang</td>
+                                            <td></td>
+                                            <td>
+                                            <a href="#myModalz" style="padding: 5px" class="btn btn-default btn-xs btn-rounded p-l-10 p-r-10" title="View"><i class="fa fa-eye"></i></a>
+                                            <a href="#myModalx" style="padding: 5px" class="btn btn-default btn-xs btn-rounded p-l-10 p-r-10" title="Tambah Kecamatan"><i class="fa fa-plus"></i></a>
+                                            </td>
+                                        </tr>
+                                        <!-- <tr>
+                                            <td align="center">3</td>
+                                            <td width="1%">&nbsp;</td>
+                                            <td colspan="6">2. Jumlah Penduduk Usia 7-12 Tahun** </td>
+                                            <td align="right"><b>8692</b></td>
+                                            <td>Orang</td>
+                                            <td></td>
+                                            <td>
+                                            <a href="#myModalz" id="custId" data-toggle="modal" data-id="1691" class="btn btn-default btn-xs btn-rounded p-l-10 p-r-10" title="View"><i class="fa fa-eye"></i></a>
+                                            <a href="#myModalx" id="custId" data-toggle="modal" data-id="1691" class="btn btn-default btn-xs btn-rounded p-l-10 p-r-10" title="Tambah Kecamatan"><i class="fa fa-plus"></i></a>
+                                            </td>
+                                            </tr>
+                                        <tr>
+                                            <td align="center">4</td>
+                                            <td width="1%">&nbsp;</td>
+                                            <td colspan="6">3. Jumlah Penduduk Usia 13-15 Tahun** </td>
+                                            <td align="right"><b>7016</b></td>
+                                            <td>Orang</td>
+                                            <td></td>
+                                            <td>
+                                            <a href="#myModalz" id="custId" data-toggle="modal" data-id="1692" class="btn btn-default btn-xs btn-rounded p-l-10 p-r-10" title="View"><i class="fa fa-eye"></i></a>
+                                            <a href="#myModalx" id="custId" data-toggle="modal" data-id="1692" class="btn btn-default btn-xs btn-rounded p-l-10 p-r-10" title="Tambah Kecamatan"><i class="fa fa-plus"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">5</td>
+                                            <td width="1%">&nbsp;</td>
+                                            <td colspan="6">4. Jumlah Penduduk Usia 16-18 Tahun** </td>
+                                            <td align="right"><b>6113</b></td>
+                                            <td>Orang</td>
+                                            <td></td>
+                                            <td>
+                                            <a href="#myModalz" id="custId" data-toggle="modal" data-id="1693" class="btn btn-default btn-xs btn-rounded p-l-10 p-r-10" title="View"><i class="fa fa-eye"></i></a>
+                                            <a href="#myModalx" id="custId" data-toggle="modal" data-id="1693" class="btn btn-default btn-xs btn-rounded p-l-10 p-r-10" title="Tambah Kecamatan"><i class="fa fa-plus"></i></a>
+                                            </td>
+                                        </tr>                   -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-            </div> -->
-            <!-- #END# Exportable Table -->
+            </div>
+            <!-- End Content -->
         </div>
     </section>
 
