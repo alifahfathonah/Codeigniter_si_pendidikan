@@ -15,9 +15,9 @@ class Pegawai extends CI_Controller {
    
 	public function index(){
         $data=[
-			'dashboard' => '',
-			'pegawai1' => 'active'
-		];
+            'dashboard' => '',
+            'pegawai1' => 'active'
+        ];
 		$data['pangkat']=[
             'Pembina Utama','Pembina Utama Madya','Pembina Utama Muda','Pembina Tingkat I','Pembina',
             'Penata Tingkat I','Penata','Penata Muda Tingkat I', 'Penata Muda',

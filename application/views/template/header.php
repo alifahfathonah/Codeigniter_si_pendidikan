@@ -66,7 +66,7 @@
     <div class="overlay"></div>
     <!-- #END# Overlay For Sidebars -->
     <!-- Search Bar -->
-    <div class="search-bar">
+    <!-- <div class="search-bar">
         <div class="search-icon">
             <i class="material-icons">search</i>
         </div>
@@ -74,7 +74,7 @@
         <div class="close-search">
             <i class="material-icons">close</i>
         </div>
-    </div>
+    </div> -->
     <!-- #END# Search Bar -->
     <!-- Top Bar -->
     <nav class="navbar">
@@ -87,7 +87,7 @@
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Call Search -->
-                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <!-- <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li> -->
                     <!-- #END# Call Search -->
                     <!-- <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li> -->
                     <li class="dropdown">
@@ -96,12 +96,12 @@
                             <span class="label-count"></span>
                         </a>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                            <!-- <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li> -->
                             <!-- <li role="separator" class="divider"></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li> -->
-                            <li role="separator" class="divider"></li>
+                            <!-- <li role="separator" class="divider"></li> -->
                             <li><a href="<?= base_url();?>login/logout" onclick="return confirm('Apakah Anda yakin ingin keluar?')"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </li>
@@ -146,10 +146,47 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
+                    
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">swap_calls</i>
+                            <span>Data Pendidikan</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="">Penduduk Berdasarkan Usia Sekolah</a>
+                            </li>
+                            <li>
+                                <a href="">Pendidikan Anak Usia Dini</a>
+                            </li>
+                            <li>
+                                <a href="">Sekolah Taman Kanak-Kanak</a>
+                            </li>
+
+                            <li>
+                                <a href="">Pendidikan Dasar</a>
+                            </li>
+                            <li>
+                                <a href="">Pendidikan Menengah Pertama</a>
+                            </li>
+                            <li>
+                                <a href="">Pendidikan Menengah Atas dan Kejuruan</a>
+                            </li>
+                            <li>
+                                <a href="">Pendidikan Non-Formal</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="<?= $pegawai1;?>">
                         <a href="<?= base_url();?>pegawai">
                             <i class="material-icons">people</i>
                             <span>Kepegawaian </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="material-icons">assignment_ind</i>
+                            <span>Administrator </span>
                         </a>
                     </li>
                     <!--<li>

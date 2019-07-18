@@ -76,6 +76,18 @@ class Home extends CI_Controller {
 					$this->load->view('home',$data);
 					$this->load->view('filter/psmp',$data);
 					$this->load->view('template/footer');
+				}elseif($header == 'VI. Pendidikan Menengah Atas dan Kejuruan*'){
+					$data['usia']=$this->M_home->cariDataPMAK();
+					$this->load->view('template/header',$data);
+					$this->load->view('home',$data);
+					$this->load->view('filter/pmak',$data);
+					$this->load->view('template/footer');
+				}elseif($header == 'VII. Pendidikan Non-Formal*'){
+					$data['usia']=$this->M_home->cariDataPNF();
+					$this->load->view('template/header',$data);
+					$this->load->view('home',$data);
+					$this->load->view('filter/pnf',$data);
+					$this->load->view('template/footer');
 				}else{
 					$this->load->view('template/header',$data);
 					$this->load->view('home',$data);
