@@ -29,7 +29,7 @@ class Home extends CI_Controller {
 			'VII. Pendidikan Non-Formal*'
 		];
 		$data['tahun']=[
-			'2017', '2018', '2019'
+			'2017'
 		];
 		if(!isset($_POST['submit'])){
 			$this->load->view('template/header',$data);
@@ -63,6 +63,18 @@ class Home extends CI_Controller {
 					$this->load->view('template/header',$data);
 					$this->load->view('home',$data);
 					$this->load->view('filter/stk',$data);
+					$this->load->view('template/footer');
+				}elseif($header == 'IV. Pendidikan Dasar*'){
+					$data['usia']=$this->M_home->cariDataPSD();
+					$this->load->view('template/header',$data);
+					$this->load->view('home',$data);
+					$this->load->view('filter/psd',$data);
+					$this->load->view('template/footer');
+				}elseif($header == 'V. Pendidikan Menengah Pertama*'){
+					$data['usia']=$this->M_home->cariDataPSMP();
+					$this->load->view('template/header',$data);
+					$this->load->view('home',$data);
+					$this->load->view('filter/psmp',$data);
 					$this->load->view('template/footer');
 				}else{
 					$this->load->view('template/header',$data);

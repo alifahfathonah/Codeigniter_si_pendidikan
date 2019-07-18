@@ -59,7 +59,7 @@
                             <tr>
                                 <td align="center">6</td>
                                 <td width="1%">&nbsp;</td>
-                                <td colspan="6">3. Jumlah Pengelola Sekolah TK ** </td>
+                                <td colspan="6">3. Jumlah Pengelola Sekolah TK ** (se-kabupaten) </td>
                                 <td align="right"><b><?= $u['jml_plsn'] + $u['jml_plss'];?></b></td>
                                 <td>Unit</td>
                                 <td></td>
@@ -68,7 +68,7 @@
                                 <td align="center">7</td>
                                 <td width="1%">&nbsp;</td>
                                 <td width="1%">&nbsp;</td>
-                                <td colspan="5">1. Negeri</td>
+                                <td colspan="5">1. Negeri </td>
                                 <td align="right"><?= $u['jml_plsn'];?></td>
                                 <td>Unit</td>
                                 <td>Dinas Pendidikan Daerah</td>
@@ -85,7 +85,7 @@
                             <tr>
                                 <td align="center">9</td>
                                 <td width="1%">&nbsp;</td>
-                                <td colspan="6">4. Jumlah Ruang Kelas Sekolah TK </td>
+                                <td colspan="6">4. Jumlah Ruang Kelas Sekolah TK (se-kabupaten)</td>
                                 <td align="right"><?= $u['jml_ruang'];?></td>
                                 <td>Ruang Kelas</td>
                                 <td>Dinas Pendidikan Daerah</td>
@@ -93,7 +93,7 @@
                             <tr>
                                 <td align="center">10</td>
                                 <td width="1%">&nbsp;</td>
-                                <td colspan="6">5. Jumlah Tenaga Pendidik TK** </td>
+                                <td colspan="6">5. Jumlah Tenaga Pendidik TK** (se-kabupaten) </td>
                                 <td align="right"><b><?= $u['jml_tp_brst'] + $u['jml_tp_tdk_brst'];?></b></td>
                                 <td>Orang</td>
                                 <td></td>
@@ -120,7 +120,7 @@
                             <tr>
                                 <td align="center">13</td>
                                 <td width="1%">&nbsp;</td>
-                                <td colspan="6">6. Rasio Siswa dengan Tenaga Pendidik </td>
+                                <td colspan="6">6. Rasio Siswa dengan Tenaga Pendidik (se-kabupaten) </td>
                                 <td align="right"><?= $u['rasio'];?></td>
                                 <td>%</td>
                                 <td>Dinas Pendidikan Daerah</td>
