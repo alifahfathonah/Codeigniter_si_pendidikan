@@ -147,32 +147,32 @@
                         </a>
                     </li>
                     
-                    <li>
+                    <li class="<?= $pendidikan;?>">
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">swap_calls</i>
                             <span>Data Pendidikan</span>
                         </a>
                         <ul class="ml-menu">
-                            <li>
-                                <a href="">Penduduk Berdasarkan Usia Sekolah</a>
+                            <li class="<?= $pendidikan_pbu;?>">
+                                <a href="<?= base_url();?>pendidikan">Penduduk Berdasarkan Usia Sekolah</a>
                             </li>
-                            <li>
+                            <li class="<?= $pendidikan_pbud;?>">
                                 <a href="">Pendidikan Anak Usia Dini</a>
                             </li>
-                            <li>
+                            <li class="<?= $pendidikan_stk;?>">
                                 <a href="">Sekolah Taman Kanak-Kanak</a>
                             </li>
 
-                            <li>
+                            <li class="<?= $pendidikan_psd;?>">
                                 <a href="">Pendidikan Dasar</a>
                             </li>
-                            <li>
+                            <li class="<?= $pendidikan_psmp;?>">
                                 <a href="">Pendidikan Menengah Pertama</a>
                             </li>
-                            <li>
+                            <li class="<?= $pendidikan_pmak;?>">
                                 <a href="">Pendidikan Menengah Atas dan Kejuruan</a>
                             </li>
-                            <li>
+                            <li class="<?= $pendidikan_pnf;?>">
                                 <a href="">Pendidikan Non-Formal</a>
                             </li>
                         </ul>
@@ -183,7 +183,7 @@
                             <span>Kepegawaian </span>
                         </a>
                     </li>
-                    <li>
+                    <li class="<?= $admin;?>">
                         <a href="">
                             <i class="material-icons">assignment_ind</i>
                             <span>Administrator </span>
