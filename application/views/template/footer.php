@@ -48,6 +48,7 @@
 
 <!-- Custom Js -->
 <script src="<?= base_url()?>assets/js/admin.js"></script>
+<script src="../../js/pages/ui/modals.js"></script>
 <?php /*?><script src="<?= base_url()?>assets/js/pages/index.js"></script><?php */?>
 <script src="<?= base_url()?>assets/js/pages/tables/jquery-datatable.js"></script>
 

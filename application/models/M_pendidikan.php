@@ -29,4 +29,22 @@ class M_Pendidikan extends CI_Model {
         $this->db->from('pbu');
         return $this->db->get()->row()->total;
     }
+
+    public function editDataPBU0_6(){
+        $data=[
+            'usia0_6' => $this->input->post('jumlah',true)
+        ];
+        $this->db->where('tahun',$this->input->post('tahun'));
+        $this->db->where('kecamatan',$this->input->post('kecamatan'));
+        return $this->db->update('pbu',$data);
+    }
+    
+    public function editDataPBU7_12(){
+        $data=[
+            'usia7_12' => $this->input->post('jumlah',true)
+        ];
+        $this->db->where('tahun',$this->input->post('tahun'));
+        $this->db->where('kecamatan',$this->input->post('kecamatan'));
+        return $this->db->update('pbu',$data);
+    }
 }

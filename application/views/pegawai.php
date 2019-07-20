@@ -24,10 +24,10 @@
                             </h2>
                             <hr>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Pegawai</a>
-                            <a href="<?= base_url();?>pegawai" class="btn btn-warning" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
-                            <a href="" class="btn btn-success" style="padding: 10px;"><i class="fa fa-file-excel-o"></i></a>
+                            <a href="<?= base_url();?>pegawai" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
+                            <!-- <a href="" class="btn btn-success" style="padding: 10px;"><i class="fa fa-file-excel-o"></i></a>
                             <a href="" class="btn btn-danger" style="padding: 10px;"><i class="fa fa-file-pdf-o"></i></a>
-                            <a href="" class="btn btn-primary" style="padding: 10px;"><i class="fa fa-file-word-o"></i></a>
+                            <a href="" class="btn btn-primary" style="padding: 10px;"><i class="fa fa-file-word-o"></i></a> -->
                             <!-- <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

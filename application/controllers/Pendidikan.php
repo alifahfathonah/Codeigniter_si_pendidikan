@@ -38,4 +38,32 @@ class Pendidikan extends CI_Controller {
         $this->load->view('data_pendidikan/hal_pbu',$data);
         $this->load->view('template/footer');
     }
+
+    public function edit_pbu(){
+        $this->form_validation->set_rules('tahun', 'Tahun', 'required|xss_clean|trim');
+        $this->form_validation->set_rules('id_pbu', 'Id', 'required|xss_clean|trim');
+        $this->form_validation->set_rules('jumlah', 'Jumlah', 'required|xss_clean|trim');
+        $this->form_validation->set_rules('kecamatan', 'Kecamatan', 'required|xss_clean|trim');
+        if($this->form_validation->run()==FALSE){
+            $this->index();
+        }else{
+            $this->M_pendidikan->editDataPBU0_6();
+            $this->session->set_flashdata('pbu', 'Diupdate');
+			redirect('pendidikan');
+        }
+    }
+
+    public function edit_pbuusia7_12(){
+        $this->form_validation->set_rules('tahun', 'Tahun', 'required|xss_clean|trim');
+        $this->form_validation->set_rules('id_pbu', 'Id', 'required|xss_clean|trim');
+        $this->form_validation->set_rules('jumlah', 'Jumlah', 'required|xss_clean|trim');
+        $this->form_validation->set_rules('kecamatan', 'Kecamatan', 'required|xss_clean|trim');
+        if($this->form_validation->run()==FALSE){
+            $this->index();
+        }else{
+            $this->M_pendidikan->editDataPBU7_12();
+            $this->session->set_flashdata('pbu', 'Diupdate');
+			redirect('pendidikan');
+        }
+    }
 }
