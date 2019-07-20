@@ -47,4 +47,26 @@ class M_Pendidikan extends CI_Model {
         $this->db->where('kecamatan',$this->input->post('kecamatan'));
         return $this->db->update('pbu',$data);
     }
+    public function editDataPBU13_15(){
+        $data=[
+            'usia13_15' => $this->input->post('jumlah',true)
+        ];
+        $this->db->where('tahun',$this->input->post('tahun'));
+        $this->db->where('kecamatan',$this->input->post('kecamatan'));
+        return $this->db->update('pbu',$data);
+    }
+    public function editDataPBU16_18(){
+        $data=[
+            'usia16_18' => $this->input->post('jumlah',true)
+        ];
+        $this->db->where('tahun',$this->input->post('tahun'));
+        $this->db->where('kecamatan',$this->input->post('kecamatan'));
+        return $this->db->update('pbu',$data);
+    }
+
+    public function hapusDataPBU(){
+        $id_pbu = $this->uri->segment(3);
+        $col = $this->uri->segment(4);
+        return $this->db->query("UPDATE pbu SET $col = 0 WHERE id_pbu = '".$id_pbu."'");
+    }
 }
