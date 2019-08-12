@@ -14,19 +14,8 @@ class Pendidikan extends CI_Controller {
     }
 
     public function index(){
-        $data=[
-            'dashboard' => '',
-            'pegawai1' => '',
-            'pendidikan' => 'active',
-            'pendidikan_pbu' =>'active',
-            'pendidikan_pbud' =>'',
-            'pendidikan_stk' =>'',
-            'pendidikan_psd' =>'',
-            'pendidikan_psmp' =>'',
-            'pendidikan_pmak' =>'',
-            'pendidikan_pnf' =>'',
-            'admin' => ''
-        ];
+        $data['sidebar']='#menu2';
+        $data['sidebar1']='#menu2-1';
         $data['tahun']=['2017'];
         $data['usia0_6']=$this->M_pendidikan->usia0_6();
         $data['usia7_12']=$this->M_pendidikan->usia7_12();

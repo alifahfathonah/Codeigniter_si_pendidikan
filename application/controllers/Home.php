@@ -13,19 +13,8 @@ class Home extends CI_Controller {
 	}
     
 	public function index(){
-		$data=[
-            'dashboard' => 'active',
-            'pegawai1' => '',
-            'pendidikan' => '',
-            'pendidikan_pbu' =>'',
-            'pendidikan_pbud' =>'',
-            'pendidikan_stk' =>'',
-            'pendidikan_psd' =>'',
-            'pendidikan_psmp' =>'',
-            'pendidikan_pmak' =>'',
-            'pendidikan_pnf' =>'',
-            'admin' => ''
-        ];
+		$data['sidebar']='#menu1';
+		$data['sidebar1']='';
 
 		$data['kec']=[
             'Bungku Tengah','Bungku Selatan','Menui Kepulauan','Bungku Barat',

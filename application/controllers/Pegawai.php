@@ -14,19 +14,8 @@ class Pegawai extends CI_Controller {
     }
    
 	public function index(){
-        $data=[
-            'dashboard' => '',
-            'pegawai1' => 'active',
-            'pendidikan' => '',
-            'pendidikan_pbu' =>'',
-            'pendidikan_pbud' =>'',
-            'pendidikan_stk' =>'',
-            'pendidikan_psd' =>'',
-            'pendidikan_psmp' =>'',
-            'pendidikan_pmak' =>'',
-            'pendidikan_pnf' =>'',
-            'admin' => ''
-        ];
+        $data['sidebar']='#menu3';
+		$data['sidebar1']='';
 		$data['pangkat']=[
             'Pembina Utama','Pembina Utama Madya','Pembina Utama Muda','Pembina Tingkat I','Pembina',
             'Penata Tingkat I','Penata','Penata Muda Tingkat I', 'Penata Muda',
@@ -66,19 +55,8 @@ class Pegawai extends CI_Controller {
     
     public function edit_pegawai(){
         
-        $data=[
-            'dashboard' => '',
-            'pegawai1' => 'active',
-            'pendidikan' => '',
-            'pendidikan_pbu' =>'',
-            'pendidikan_pbud' =>'',
-            'pendidikan_stk' =>'',
-            'pendidikan_psd' =>'',
-            'pendidikan_psmp' =>'',
-            'pendidikan_pmak' =>'',
-            'pendidikan_pnf' =>'',
-            'admin' => ''
-        ];
+        $data['sidebar']='#menu3';
+		$data['sidebar1']='';
         $data['pangkat']=[
             'Pembina Utama','Pembina Utama Madya','Pembina Utama Muda','Pembina Tingkat I','Pembina',
             'Penata Tingkat I','Penata','Penata Muda Tingkat I', 'Penata Muda',
