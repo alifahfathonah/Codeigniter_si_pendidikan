@@ -9,13 +9,14 @@ class Konsultasi extends CI_Controller {
         if($this->session->userdata('logged_in_admin') !== TRUE){
             redirect('login');
 		}
-		// $this->load->model('M_home');
+        $this->load->model('M_konsultasi');
+        $this->load->helper(array('string','text'));
     }
     
     public function index(){
         $data['sidebar']='#menu4';
         $data['sidebar1']='';
-        
+        $data['pesan'] = $this->M_konsultasi->getAllKonsultasi();
         $this->load->view('template/header',$data);
         $this->load->view('konsultasi',$data);
         $this->load->view('template/footer');
