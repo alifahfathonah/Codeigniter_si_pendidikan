@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -170,6 +171,12 @@
                     <a href="<?= base_url();?>konsultasi">
                         <i class="material-icons">forum</i>
                         <span>Konsultasi </span>
+                    </a>
+                </li>
+                <li id="menu6">
+                    <a href="<?= base_url();?>absen">
+                        <i class="material-icons">archive</i>
+                        <span>Absen </span>
                     </a>
                 </li>
                 <li id="menu5">

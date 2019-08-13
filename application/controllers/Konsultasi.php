@@ -21,4 +21,10 @@ class Konsultasi extends CI_Controller {
         $this->load->view('konsultasi',$data);
         $this->load->view('template/footer');
     }
+
+    public function tanggap($id_konsultasi){
+        $this->M_konsultasi->tanggapKonsultasi($id_konsultasi);
+        $this->session->set_flashdata('konsultasi', 'Ditanggapi');
+        redirect('konsultasi');
+    }
 }
