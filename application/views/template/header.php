@@ -88,7 +88,7 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <!-- Call Search -->
-                <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                <!-- <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li> -->
                 <!-- #END# Call Search -->
                 
                 <li class="dropdown">
@@ -97,7 +97,7 @@
                         <span class="label-count"></span>
                     </a>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                        <li><a href="<?= base_url();?>administrator"><i class="material-icons">person</i>Admin</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="<?= base_url();?>login/logout" onclick="return confirm('Apakah Anda yakin ingin keluar?')"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>

@@ -1,13 +1,13 @@
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>Kepegawaian</h2>
+                <h2>Administrator</h2>
             </div>
             <!-- Exportable Table -->
             <?php if($this->session->flashdata('admin')):?>
                 <div class="alert alert-success alert-dismissible" role="alert">
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  Data pegawai <strong>berhasil</strong> <?= $this->session->flashdata('admin');?>
+                  Data administrator <strong>berhasil</strong> <?= $this->session->flashdata('admin');?>
                 </div>
             <?php endif;?>
             <?php if(validation_errors()):?>
@@ -20,7 +20,7 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                DATA PEGAWAI
+                                DATA ADMINISTRATOR
                             </h2>
                             <hr>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Admin</a>

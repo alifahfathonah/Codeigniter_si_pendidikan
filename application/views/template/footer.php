@@ -44,6 +44,7 @@
     });
 </script>
 
+
 <!-- Sparkline Chart Plugin Js -->
 <script src="<?= base_url();?>assets/plugins/jquery-sparkline/jquery.sparkline.js"></script>
 
@@ -56,7 +57,30 @@
 
 <!-- Demo Js -->
 <script src="<?= base_url();?>assets/js/demo.js"></script>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#kecamatan').change(function(){
+            var nama_kecamatan=$(this).val();
+            $.ajax({
+                url : "<?= base_url();?>absen/getSekolahKecamatan",
+                // method : "POST",
+                type : "POST",
+                data : {kecamatan: nama_kecamatan},
+                async : false,
+                dataType : 'json',
+                success: function(response){
+                    var html = '';
+                    var i;
+                    for(i=0; i<data.length; i++){
+                        html += '<option value="'+data[i].nama_sekolah+'">'+data[i].nama_sekolah+'</option>';
+                    }
+                    $('.sekolah').html(html);
+                        
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 </html>
