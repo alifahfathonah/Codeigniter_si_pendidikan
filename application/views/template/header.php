@@ -138,7 +138,7 @@
                     </a>
                     <ul class="ml-menu">
                         <li id="menu2-1">
-                            <a href="<?= base_url();?>pendidikan">Penduduk Berdasarkan Usia Sekolah</a>
+                            <a href="<?= base_url();?>pendidikanusia">Penduduk Berdasarkan Usia Sekolah</a>
                         </li>
                         <li id="menu2-2">
                             <a href="">Pendidikan Anak Usia Dini</a>
