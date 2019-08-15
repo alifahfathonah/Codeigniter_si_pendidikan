@@ -50,6 +50,12 @@
                             Data <strong>berhasil</strong> <?= $this->session->flashdata('pbu');?>
                             </div>
                         <?php endif;?>
+                        <?php if($this->session->flashdata('pbu1')):?>
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <?= $this->session->flashdata('pbu1');?>
+                            </div>
+                        <?php endif;?>
                         <?php if(validation_errors()):?>
                         <div class="alert alert-danger" role="alert">
                             <?= validation_errors();?>

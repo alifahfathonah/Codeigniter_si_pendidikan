@@ -53,9 +53,28 @@ class PendidikanUsia extends CI_Controller {
         if($this->form_validation->run()==FALSE){
             $this->index();
         }else{
-            $this->M_pendidikan_usia->tambahDataPendidikanUsia();
-            $this->session->set_flashdata('pbu', 'ditambahkan');
-			redirect('pendidikanusia');
+            $nama_kecamatan = $this->input->post('nama_kecamatan', true);
+            $usia = $this->input->post('usia', true);
+            $jumlah = $this->input->post('jumlah', true);
+            $tahun = $this->input->post('tahun', true);
+            $this->db->where('nama_kecamatan', $nama_kecamatan);
+            $this->db->where('usia', $usia);
+            $this->db->where('tahun', $tahun);
+            $hasil=$this->db->get('pendidikan_usia');
+            $data=[
+                'nama_kecamatan' => $nama_kecamatan,
+                'usia' => $usia,
+                'jumlah' => $jumlah,
+                'tahun' => $tahun
+            ];
+            if($hasil->num_rows()<=0){
+                $this->M_pendidikan_usia->tambahDataPendidikanUsia();
+                $this->session->set_flashdata('pbu', 'Ditambahkan');
+                redirect('pendidikanusia');
+            }else{
+                $this->session->set_flashdata('pbu1', 'Data pada tahun dan usia tersebut sudah ada');
+                redirect('pendidikanusia');
+            }
         }
     }
 

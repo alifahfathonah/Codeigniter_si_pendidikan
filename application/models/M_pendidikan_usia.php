@@ -4,27 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_Pendidikan_Usia extends CI_Model {
 
     public function tambahDataPendidikanUsia(){
-        $nama_kecamatan = $this->input->post('nama_kecamatan', true);
-        $usia = $this->input->post('usia', true);
-        $jumlah = $this->input->post('jumlah', true);
-        $tahun = $this->input->post('tahun', true);
-        $this->db->where('nama_kecamatan', $nama_kecamatan);
-        $this->db->where('usia', $usia);
-        $this->db->where('tahun', $tahun);
-        $hasil=$this->db->get('pendidikan_usia');
         $data=[
-            'nama_kecamatan' => $nama_kecamatan,
-            'usia' => $usia,
-            'jumlah' => $jumlah,
-            'tahun' => $tahun
+            'nama_kecamatan' => $this->input->post('nama_kecamatan', true),
+            'usia' => $this->input->post('usia', true),
+            'jumlah' => $this->input->post('jumlah', true),
+            'tahun' => $this->input->post('tahun', true)
         ];
-        if($hasil->num_rows()<=0){
-            $this->db->insert('pendidikan_usia', $data);
-        }else{
-            // $this->db->;
-            // $this->db->update('pendidikan_usia', $data);
-        }
-
+        $this->db->insert('pendidikan_usia', $data);
     }
 
     public function getAllTahun(){
