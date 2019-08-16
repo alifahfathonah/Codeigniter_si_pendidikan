@@ -141,7 +141,7 @@
                             <a href="<?= base_url();?>pendidikanusia">Penduduk Berdasarkan Usia Sekolah</a>
                         </li>
                         <li id="menu2-2">
-                            <a href="">Pendidikan Anak Usia Dini</a>
+                            <a href="<?= base_url();?>paud">Pendidikan Anak Usia Dini</a>
                         </li>
                         <li id="menu2-3">
                             <a href="">Sekolah Taman Kanak-Kanak</a>

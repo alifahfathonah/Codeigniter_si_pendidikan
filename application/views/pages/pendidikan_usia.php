@@ -3,12 +3,6 @@
             <div class="block-header">
                 <h2>Data Pendidikan</h2>
             </div>
-            <?php if($this->session->flashdata('cari')):?>
-                <div class="alert alert-success alert-dismissible" role="alert">
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  Data pegawai <strong>berhasil</strong> <?= $this->session->flashdata('pegawai');?>
-                </div>
-            <?php endif;?>
             <!-- Content -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -20,6 +14,7 @@
                             </h2>
                             <hr>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Pendidikan</a>
+                            <a href="<?= base_url();?>pendidikanusia" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
                             <hr>
                             <form method="post" action="">
                                 <div class="row clearfix">
