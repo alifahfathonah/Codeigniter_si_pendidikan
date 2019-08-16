@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2019 at 12:38 AM
+-- Generation Time: Aug 16, 2019 at 04:29 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -25,36 +25,117 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pbu`
+-- Table structure for table `absen`
 --
 
-CREATE TABLE `pbu` (
-  `id_pbu` int(11) NOT NULL,
-  `usia0_6` int(11) NOT NULL,
-  `usia7_12` int(11) NOT NULL,
-  `usia13_15` int(11) NOT NULL,
-  `usia16_18` int(11) NOT NULL,
-  `peserta_paud` int(11) NOT NULL,
-  `bangunan_paud` int(11) NOT NULL,
-  `tenaga_pendidik_paud` int(11) NOT NULL,
+CREATE TABLE `absen` (
+  `id_absen` int(11) NOT NULL,
+  `kecamatan` varchar(200) NOT NULL,
+  `sekolah` varchar(200) NOT NULL,
+  `bulan` varchar(200) NOT NULL,
+  `gambar` varchar(200) NOT NULL,
+  `tahun` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kecamatan`
+--
+
+CREATE TABLE `kecamatan` (
+  `id_kecamatan` int(11) NOT NULL,
+  `nama_kecamatan` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kecamatan`
+--
+
+INSERT INTO `kecamatan` (`id_kecamatan`, `nama_kecamatan`) VALUES
+(1, 'Bungku Tengah'),
+(2, 'Bungku Selatan'),
+(3, 'Menui Kepulauan'),
+(4, 'Bungku Barat'),
+(5, 'Bumi Raya'),
+(6, 'Bahodopi'),
+(7, 'Wita Ponda'),
+(8, 'Bungku Pesisir'),
+(9, 'Bungku Timur');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `konsultasi`
+--
+
+CREATE TABLE `konsultasi` (
+  `id_konsultasi` int(11) NOT NULL,
   `kecamatan` varchar(100) NOT NULL,
+  `judul_konsultasi` varchar(200) NOT NULL,
+  `isi_konsultasi` text NOT NULL,
+  `isi_balasan` text NOT NULL,
+  `status` varchar(12) NOT NULL,
+  `tgl_kirim` datetime NOT NULL,
+  `tgl_balas` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `konsultasi`
+--
+
+INSERT INTO `konsultasi` (`id_konsultasi`, `kecamatan`, `judul_konsultasi`, `isi_konsultasi`, `isi_balasan`, `status`, `tgl_kirim`, `tgl_balas`) VALUES
+(1, 'Bungku Tengah', 'Konsultasi Contoh', 'Konsultasi masalah pendidikan di morowali khususnya di kecamatan bungku tengah', 'Ok ok', 'sudah dibaca', '2019-08-13 00:00:00', '2019-08-14 20:35:20'),
+(2, 'Bungku Selatan', 'Contoh Konsultasi', 'Contoh Konsultasi', 'Ok ok', 'sudah dibaca', '2019-08-13 00:00:00', '2019-08-13 21:26:28'),
+(3, 'Bungku Barat', 'Pendidikan', 'qwe', 'iye', 'sudah dibaca', '2019-08-14 00:00:00', '2019-08-14 21:00:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `paud`
+--
+
+CREATE TABLE `paud` (
+  `id_paud` int(11) NOT NULL,
+  `nama_kecamatan` varchar(100) NOT NULL,
+  `berdasarkan` varchar(100) NOT NULL,
+  `jumlah` int(11) NOT NULL,
   `tahun` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pbu`
+-- Dumping data for table `paud`
 --
 
-INSERT INTO `pbu` (`id_pbu`, `usia0_6`, `usia7_12`, `usia13_15`, `usia16_18`, `peserta_paud`, `bangunan_paud`, `tenaga_pendidik_paud`, `kecamatan`, `tahun`) VALUES
-(1, 1678, 2987, 1450, 1306, 451, 19, 55, 'Bungku Tengah', 2017),
-(2, 953, 1828, 978, 880, 178, 7, 12, 'Bungku Selatan', 2017),
-(3, 1084, 1778, 850, 761, 535, 19, 53, 'Menui Kepulauan', 2017),
-(4, 1049, 1666, 418, 820, 301, 13, 21, 'Bungku Barat', 2017),
-(5, 1430, 1771, 868, 857, 182, 11, 16, 'Bumi Raya', 2017),
-(6, 1251, 1246, 604, 388, 318, 8, 30, 'Bahodopi', 2017),
-(7, 1938, 2512, 1470, 1246, 241, 12, 20, 'Wita Ponda', 2017),
-(8, 546, 711, 335, 355, 152, 4, 19, 'Bungku Pesisir', 2017),
-(9, 1105, 1313, 691, 545, 223, 7, 25, 'Bungku Timur', 2017);
+INSERT INTO `paud` (`id_paud`, `nama_kecamatan`, `berdasarkan`, `jumlah`, `tahun`) VALUES
+(1, 'Bungku Tengah', 'peserta', 499, 2019),
+(2, 'Bungku Selatan', 'peserta', 277, 2019),
+(3, 'Menuai Kepulauan', 'peserta', 458, 2019),
+(4, 'Bungku Barat', 'peserta', 346, 2019),
+(5, 'Bumi Raya', 'peserta', 230, 2019),
+(6, 'Bahodopi', 'peserta', 256, 2019),
+(7, 'Wita Ponda', 'peserta', 223, 2019),
+(8, 'Bungku Pesisir', 'peserta', 83, 2019),
+(9, 'Bungku Timur', 'peserta', 158, 2019),
+(10, 'Bungku Tengah', 'bangunan', 18, 2019),
+(11, 'Bungku Selatan', 'bangunan', 9, 2019),
+(12, 'Menuai Kepulauan', 'bangunan', 19, 2019),
+(13, 'Bungku Barat', 'bangunan', 14, 2019),
+(14, 'Bumi Raya', 'bangunan', 13, 2019),
+(15, 'Bahodopi', 'bangunan', 8, 2019),
+(16, 'Wita Ponda', 'bangunan', 12, 2019),
+(17, 'Bungku Pesisir', 'bangunan', 4, 2019),
+(18, 'Bungku Timur', 'bangunan', 7, 2019),
+(19, 'Bungku Tengah', 'pengajar', 73, 2019),
+(20, 'Bungku Selatan', 'pengajar', 69, 2019),
+(21, 'Menuai Kepulauan', 'pengajar', 62, 2019),
+(22, 'Bungku Barat', 'pengajar', 54, 2019),
+(23, 'Bumi Raya', 'pengajar', 49, 2019),
+(24, 'Bahodopi', 'pengajar', 34, 2019),
+(25, 'Wita Ponda', 'pengajar', 55, 2019),
+(26, 'Bungku Pesisir', 'pengajar', 27, 2019),
+(27, 'Bungku Timur', 'pengajar', 36, 2019),
+(28, 'Bungku Tengah', 'peserta', 499, 2018);
 
 -- --------------------------------------------------------
 
@@ -73,6 +154,64 @@ CREATE TABLE `pegawai` (
   `kec` varchar(100) NOT NULL,
   `kel_des` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pendidikan_usia`
+--
+
+CREATE TABLE `pendidikan_usia` (
+  `id_pendidikan_usia` int(11) NOT NULL,
+  `nama_kecamatan` varchar(100) NOT NULL,
+  `usia` varchar(5) NOT NULL,
+  `jumlah` int(11) NOT NULL,
+  `tahun` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pendidikan_usia`
+--
+
+INSERT INTO `pendidikan_usia` (`id_pendidikan_usia`, `nama_kecamatan`, `usia`, `jumlah`, `tahun`) VALUES
+(1, 'Bungku Tengah', '0-6', 1858, 2019),
+(2, 'Bungku Selatan', '0-6', 1529, 2019),
+(3, 'Menuai Kepulauan', '0-6', 13306, 2019),
+(4, 'Bungku Barat', '0-6', 0, 2019),
+(5, 'Bumi Raya', '0-6', 1788, 2019),
+(6, 'Bahodopi', '0-6', 1147, 2019),
+(7, 'Wita Ponda', '0-6', 2681, 2019),
+(8, 'Bungku Pesisir', '0-6', 687, 2019),
+(9, 'Bungku Timur', '0-6', 762, 2019),
+(10, 'Bungku Tengah', '7-12', 2536, 2019),
+(11, 'Bungku Selatan', '7-12', 157, 2019),
+(12, 'Menuai Kepulauan', '7-12', 418, 2019),
+(13, 'Bungku Barat', '7-12', 14, 2019),
+(14, 'Bumi Raya', '7-12', 1449, 2019),
+(15, 'Bahodopi', '7-12', 879, 2019),
+(16, 'Wita Ponda', '7-12', 2137, 2019),
+(17, 'Bungku Pesisir', '7-12', 659, 2019),
+(18, 'Bungku Timur', '7-12', 443, 2019),
+(19, 'Bungku Tengah', '13-15', 1298, 2019),
+(20, 'Bungku Selatan', '13-15', 918, 2019),
+(21, 'Menuai Kepulauan', '13-15', 360, 2019),
+(22, 'Bungku Barat', '13-15', 723, 2019),
+(23, 'Bumi Raya', '13-15', 662, 2019),
+(24, 'Bahodopi', '13-15', 434, 2019),
+(25, 'Wita Ponda', '13-15', 1067, 2019),
+(26, 'Bungku Pesisir', '13-15', 391, 2019),
+(27, 'Bungku Timur', '13-15', 245, 2019),
+(28, 'Bungku Tengah', '16-18', 1372, 2019),
+(29, 'Bungku Selatan', '16-18', 844, 2019),
+(30, 'Menuai Kepulauan', '16-18', 353, 2019),
+(31, 'Bungku Barat', '16-18', 716, 2019),
+(32, 'Bumi Raya', '16-18', 853, 2019),
+(33, 'Bahodopi', '16-18', 411, 2019),
+(34, 'Wita Ponda', '16-18', 1007, 2019),
+(35, 'Bungku Pesisir', '16-18', 330, 2019),
+(36, 'Bungku Timur', '16-18', 227, 2019),
+(39, 'Bungku Tengah', '0-6', 1858, 2018),
+(41, 'Bungku Selatan', '0-6', 2341, 2018);
 
 -- --------------------------------------------------------
 
@@ -221,6 +360,29 @@ INSERT INTO `psmp` (`id_psmp`, `jml_siswa`, `jml_bg_baik`, `jml_bg_tdk_baik`, `j
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sekolah_kecamatan`
+--
+
+CREATE TABLE `sekolah_kecamatan` (
+  `id_sekolah` int(11) NOT NULL,
+  `id_kecamatan` int(11) NOT NULL,
+  `nama_kecamatan` varchar(200) NOT NULL,
+  `nama_sekolah` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sekolah_kecamatan`
+--
+
+INSERT INTO `sekolah_kecamatan` (`id_sekolah`, `id_kecamatan`, `nama_kecamatan`, `nama_sekolah`) VALUES
+(1, 6, 'Bahodopi', 'SDN Bete-bete'),
+(2, 6, 'Bahodopi', 'SDN Dampala'),
+(3, 7, 'Wita Ponda', 'SDN 1 Puntari Makmur'),
+(4, 7, 'Wita Ponda', 'SDN 2 Puntari Makmur');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `stk`
 --
 
@@ -257,6 +419,25 @@ INSERT INTO `stk` (`id_stk`, `jml_siswa`, `jml_bg_baik`, `jml_bg_tdk_baik`, `jml
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_tahun`
+--
+
+CREATE TABLE `tb_tahun` (
+  `id_tahun` int(11) NOT NULL,
+  `tahun` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_tahun`
+--
+
+INSERT INTO `tb_tahun` (`id_tahun`, `tahun`) VALUES
+(1, 2018),
+(2, 2019);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -271,23 +452,48 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`) VALUES
-(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e');
+(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e'),
+(3, 'qwe123', 'f7cc65e0c9b1b0c0822222e970663691');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `pbu`
+-- Indexes for table `absen`
 --
-ALTER TABLE `pbu`
-  ADD PRIMARY KEY (`id_pbu`);
+ALTER TABLE `absen`
+  ADD PRIMARY KEY (`id_absen`);
+
+--
+-- Indexes for table `kecamatan`
+--
+ALTER TABLE `kecamatan`
+  ADD PRIMARY KEY (`id_kecamatan`);
+
+--
+-- Indexes for table `konsultasi`
+--
+ALTER TABLE `konsultasi`
+  ADD PRIMARY KEY (`id_konsultasi`);
+
+--
+-- Indexes for table `paud`
+--
+ALTER TABLE `paud`
+  ADD PRIMARY KEY (`id_paud`);
 
 --
 -- Indexes for table `pegawai`
 --
 ALTER TABLE `pegawai`
   ADD PRIMARY KEY (`id_pegawai`);
+
+--
+-- Indexes for table `pendidikan_usia`
+--
+ALTER TABLE `pendidikan_usia`
+  ADD PRIMARY KEY (`id_pendidikan_usia`);
 
 --
 -- Indexes for table `pmak`
@@ -314,10 +520,22 @@ ALTER TABLE `psmp`
   ADD PRIMARY KEY (`id_psmp`);
 
 --
+-- Indexes for table `sekolah_kecamatan`
+--
+ALTER TABLE `sekolah_kecamatan`
+  ADD PRIMARY KEY (`id_sekolah`);
+
+--
 -- Indexes for table `stk`
 --
 ALTER TABLE `stk`
   ADD PRIMARY KEY (`id_stk`);
+
+--
+-- Indexes for table `tb_tahun`
+--
+ALTER TABLE `tb_tahun`
+  ADD PRIMARY KEY (`id_tahun`);
 
 --
 -- Indexes for table `user`
@@ -330,16 +548,40 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `pbu`
+-- AUTO_INCREMENT for table `absen`
 --
-ALTER TABLE `pbu`
-  MODIFY `id_pbu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+ALTER TABLE `absen`
+  MODIFY `id_absen` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `kecamatan`
+--
+ALTER TABLE `kecamatan`
+  MODIFY `id_kecamatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `konsultasi`
+--
+ALTER TABLE `konsultasi`
+  MODIFY `id_konsultasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `paud`
+--
+ALTER TABLE `paud`
+  MODIFY `id_paud` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
   MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pendidikan_usia`
+--
+ALTER TABLE `pendidikan_usia`
+  MODIFY `id_pendidikan_usia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `pmak`
@@ -366,16 +608,28 @@ ALTER TABLE `psmp`
   MODIFY `id_psmp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `sekolah_kecamatan`
+--
+ALTER TABLE `sekolah_kecamatan`
+  MODIFY `id_sekolah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `stk`
 --
 ALTER TABLE `stk`
   MODIFY `id_stk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `tb_tahun`
+--
+ALTER TABLE `tb_tahun`
+  MODIFY `id_tahun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
