@@ -151,7 +151,7 @@
                             <a href="<?= base_url();?>sd">Pendidikan Dasar</a>
                         </li>
                         <li id="menu2-5">
-                            <a href="">Pendidikan Menengah Pertama</a>
+                            <a href="<?= base_url();?>smp">Pendidikan Menengah Pertama</a>
                         </li>
                         <li id="menu2-6">
                             <a href="">Pendidikan Menengah Atas dan Kejuruan</a>
