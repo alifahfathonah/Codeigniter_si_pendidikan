@@ -9,12 +9,15 @@ class HomeUptd extends CI_Controller {
         if($this->session->userdata('logged_in_admin_uptd') !== TRUE){
             redirect('login');
 		}
-		$this->load->model('M_home');
+		$this->load->model('M_home_uptd');
 	}
     
 	public function index(){
 		$data['sidebar']='#menu1';
 		$data['sidebar1']='';
+		$data['pegawai'] = $this->M_home_uptd->getJmlPegawai();
+		$data['konsultasi'] = $this->M_home_uptd->getJmlKonsultasi();
+		$data['user'] = $this->M_home_uptd->getJmlUser();
 
 		$this->load->view('template/headeruptd',$data);
 		$this->load->view('homeuptd',$data);
