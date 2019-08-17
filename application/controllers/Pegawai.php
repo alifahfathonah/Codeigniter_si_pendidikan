@@ -32,8 +32,8 @@ class Pegawai extends CI_Controller {
             'Bungku Tengah','Bungku Selatan','Menui Kepulauan','Bungku Barat',
             'Bumi Raya','Bahodopi','Wita Ponda','Bungku Pesisir','Bungku Timur'
         ];
-		
-        $this->form_validation->set_rules('nip', 'NIP', 'required|xss_clean|numeric|max_length[18]|trim');
+		$data['status'] = ['ASN', 'NON-ASN'];
+        $this->form_validation->set_rules('nip', 'NIP', 'xss_clean|numeric|max_length[18]|trim');
         $this->form_validation->set_rules('nama', 'Nama', 'required|xss_clean|trim');
         $this->form_validation->set_rules('pangkat', 'Pangkat', 'required|xss_clean|trim');
         $this->form_validation->set_rules('gol', 'Golongan', 'required|xss_clean|trim');
@@ -73,6 +73,7 @@ class Pegawai extends CI_Controller {
             'Bungku Tengah','Bungku Selatan','Menui Kepulauan','Bungku Barat',
             'Bumi Raya','Bahodopi','Wita Ponda','Bungku Pesisir','Bungku Timur'
         ];
+        $data['status'] = ['ASN', 'NON-ASN'];
         $this->form_validation->set_rules('nip1', 'NIP', 'required|xss_clean|numeric|max_length[18]|trim');
         $this->form_validation->set_rules('nama1', 'Nama', 'required|xss_clean|trim');
         $this->form_validation->set_rules('pangkat1', 'Pangkat', 'required');

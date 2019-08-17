@@ -25,21 +25,6 @@
                             <hr>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Pegawai</a>
                             <a href="<?= base_url();?>pegawai" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
-                            <!-- <a href="" class="btn btn-success" style="padding: 10px;"><i class="fa fa-file-excel-o"></i></a>
-                            <a href="" class="btn btn-danger" style="padding: 10px;"><i class="fa fa-file-pdf-o"></i></a>
-                            <a href="" class="btn btn-primary" style="padding: 10px;"><i class="fa fa-file-word-o"></i></a> -->
-                            <!-- <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">more_vert</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul> -->
                         </div>
                         <div class="body">
                             <div class="table-responsive">
@@ -126,7 +111,7 @@
                                             </div>
                                             <div class="form-group form-float">
                                                 <div class="form-line">
-                                                    <input type="number" class="form-control" name="nip" maxlength="18" minlength="18" required>
+                                                    <input type="number" class="form-control" name="nip" maxlength="18" minlength="18">
                                                     <label class="form-label">NIP</label>
                                                 </div>
                                                 <div class="help-info"></div>
@@ -188,6 +173,18 @@
                                                 </div>
                                                 <div class="help-info"></div>
                                             </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <p>Status</p>
+                                                    <select class="form-control show-tick" name="status">
+                                                        <option></option>
+                                                        <?php foreach($status as $st):?>
+                                                            <option value="<?= $st;?>"><?= $st;?></option>
+                                                        <?php endforeach;?>
+                                                    </select>
+                                                </div>
+                                            </div>
                                             <button class="btn btn-primary waves-effect" type="submit">Tambah</button>
                                         </form>
                                     </div>
@@ -228,7 +225,7 @@
                                             </div>
                                             <div class="form-group form-float">
                                                 <div class="form-line">
-                                                    <input type="number" class="form-control" name="nip1" required value="<?= $pgw['nip'];?>">
+                                                    <input type="number" class="form-control" name="nip1" value="<?= $pgw['nip'];?>">
                                                     <label class="form-label">NIP</label>
                                                 </div>
                                                 <div class="help-info"></div>
@@ -301,6 +298,22 @@
                                                     <label class="form-label">Kelurahan / Desa</label>
                                                 </div>
                                                 <div class="help-info"></div>
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <p>Status</p>
+                                                    <select class="form-control show-tick" name="status1">
+                                                        <option></option>
+                                                        <?php foreach($status as $st):?>
+                                                            <?php if($st == $pgw['status'] ):?>
+                                                                <option value="<?= $st;?>" selected><?= $st;?></option>
+                                                            <?php else :?>
+                                                                <option value="<?= $st;?>"><?= $st;?></option>
+                                                            <?php endif;?>
+                                                        <?php endforeach;?>
+                                                    </select>
+                                                </div>
                                             </div>
                                             <button class="btn btn-primary waves-effect" type="submit">Update</button>
                                         </form>

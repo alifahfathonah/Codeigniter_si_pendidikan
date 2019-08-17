@@ -17,6 +17,7 @@ class M_Pegawai extends CI_Model {
             'tmpt_ajar' => $this->input->post('tmpt_ajar', true),
             'kec' => $this->input->post('kec', true),
             'kel_des' => $this->input->post('kel_des', true),
+            'status' => $this->input->post('status', true),
         ];
         $this->db->insert('pegawai',$dataPegawai);
         
@@ -33,6 +34,7 @@ class M_Pegawai extends CI_Model {
             'tmpt_ajar' => $this->input->post('tmpt_ajar1', true),
             'kec' => $this->input->post('kec1', true),
             'kel_des' => $this->input->post('kel_des1', true),
+            'status' => $this->input->post('status1', true),
         ];
         $this->db->where('id_pegawai',$id);
         $this->db->update('pegawai',$dataPegawai);
