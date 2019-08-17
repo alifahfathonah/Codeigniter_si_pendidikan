@@ -9,12 +9,12 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Data Sekolah Taman Kanak-Kanak
+                                Data Pendidikan Dasar
                                 <!-- <small>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</small> -->
                             </h2>
                             <hr>
-                            <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Sekolah Taman Kanak-Kanak</a>
-                            <a href="<?= base_url();?>tk" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
+                            <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Pendidikan Dasar</a>
+                            <a href="<?= base_url();?>sd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
                             <hr>
                             <form method="post" action="">
                                 <div class="row clearfix">
@@ -37,7 +37,7 @@
                             </form>
                         </div>
                         <div class="body table-responsive">
-                            <h4> Data Sekolah Taman Kanak-Kanak di Tahun <?= $sort;?> </h4>   
+                            <h4> Data Pendidikan Dasar di Tahun <?= $sort;?> </h4>   
                         <hr>
                         <?php if($this->session->flashdata('pbu')):?>
                             <div class="alert alert-success alert-dismissible" role="alert">
@@ -86,7 +86,7 @@
                                 <tr>
                                     <td align="center">3</td>
                                     <td width="1%">&nbsp;</td>
-                                    <td colspan="6">2. Jumlah Bangunan Sekolah TK ** </td>
+                                    <td colspan="6">2. Jumlah Bangunan Sekolah SD/MI/Sederajat ** </td>
                                     <td align="right"><b><?= $jml_bg_baik + $jml_bg_tdk_baik;?></b></td>
                                     <td>Unit</td>
                                     <td></td>
@@ -115,7 +115,7 @@
                                 <tr>
                                     <td align="center">6</td>
                                     <td width="1%">&nbsp;</td>
-                                    <td colspan="6">3. Jumlah Pengelola Sekolah TK **   </td>
+                                    <td colspan="6">3. Jumlah Pengelola Sekolah Sekolah SD/MI/Sederajat **   </td>
                                     <td align="right"><b><?= $jml_pgl_negeri + $jml_pgl_swasta;?></b></td>
                                     <td>Unit</td>
                                     <td></td>
@@ -132,7 +132,7 @@
                                     <td>
                                         <a href="" class="btn btn-default" data-toggle="modal" data-target="#pglnegeri"><i class="fa fa-edit"></i></a>
                                         <?php foreach($pgl_negeri as $p):?>
-                                            <a href="<?= base_url();?>tk/hapus_pgl_negeri/<?= $p['id_tb_pengelola_negeri'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                            <a href="<?= base_url();?>sd/hapus_pgl_negeri/<?= $p['id_tb_pengelola_negeri'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                         <?php endforeach;?>
                                     </td>
                                 </tr>
@@ -146,27 +146,27 @@
                                     <td>Dinas Pendidikan Daerah</td>
                                     <td><a href="" class="btn btn-default" data-toggle="modal" data-target="#pglswasta"><i class="fa fa-edit"></i></a>
                                         <?php foreach($pgl_swasta as $p):?>
-                                            <a href="<?= base_url();?>tk/hapus_pgl_swasta/<?= $p['id_tb_pengelola_swasta'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                            <a href="<?= base_url();?>sd/hapus_pgl_swasta/<?= $p['id_tb_pengelola_swasta'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                         <?php endforeach;?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td align="center">9</td>
                                     <td width="1%">&nbsp;</td>
-                                    <td colspan="6">4. Jumlah Ruang Kelas Sekolah TK  </td>
+                                    <td colspan="6">4. Jumlah Ruang Kelas Sekolah SD/MI/Sederajat  </td>
                                     <td align="right"><b><?= $jml_rg_kelas;?></b></td>
                                     <td>Ruang Kelas</td>
                                     <td>Dinas Pendidikan Daerah</td>
                                     <td><a href="" class="btn btn-default" data-toggle="modal" data-target="#rgkelas"><i class="fa fa-edit"></i></a>
                                         <?php foreach($rg_kelas as $p):?>
-                                            <a href="<?= base_url();?>tk/hapus_rg_kelas/<?= $p['id_tb_ruang_kelas'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                            <a href="<?= base_url();?>sd/hapus_rg_kelas/<?= $p['id_tb_ruang_kelas'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                         <?php endforeach;?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td align="center">10</td>
                                     <td width="1%">&nbsp;</td>
-                                    <td colspan="6">5. Jumlah Tenaga Pendidik TK**   </td>
+                                    <td colspan="6">5. Jumlah Tenaga Pendidik Sekolah SD/MI/Sederajat**   </td>
                                     <td align="right"><b><?= $jml_pd_bersertifikat + $jml_pd_tdk_bersertifikat;?></b></td>
                                     <td>Orang</td>
                                     <td></td>
@@ -182,7 +182,7 @@
                                     <td>Dinas Pendidikan Daerah</td>
                                     <td><a href="" class="btn btn-default" data-toggle="modal" data-target="#pdbersertifikat"><i class="fa fa-edit"></i></a>
                                         <?php foreach($pd_bersertifikat as $p):?>
-                                            <a href="<?= base_url();?>tk/hapus_pd_bersertifikat/<?= $p['id_tb_pendidik_bersertifikat'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                            <a href="<?= base_url();?>sd/hapus_pd_bersertifikat/<?= $p['id_tb_pendidik_bersertifikat'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                         <?php endforeach;?>
                                     </td>
                                 </tr>
@@ -196,7 +196,7 @@
                                     <td>Dinas Pendidikan Daerah</td>
                                     <td><a href="" class="btn btn-default" data-toggle="modal" data-target="#pdtdkbersertifikat"><i class="fa fa-edit"></i></a>
                                         <?php foreach($pd_tdk_bersertifikat as $p):?>
-                                            <a href="<?= base_url();?>tk/hapus_pd_tdk_bersertifikat/<?= $p['id_tb_pendidik_tdk_bersertifikat'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                            <a href="<?= base_url();?>sd/hapus_pd_tdk_bersertifikat/<?= $p['id_tb_pendidik_tdk_bersertifikat'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                         <?php endforeach;?>
                                     </td>
                                 </tr>
@@ -209,7 +209,7 @@
                                     <td>Dinas Pendidikan Daerah</td>
                                     <td><a href="" class="btn btn-default" data-toggle="modal" data-target="#rasio"><i class="fa fa-edit"></i></a>
                                         <?php foreach($rasio as $p):?>
-                                            <a href="<?= base_url();?>tk/hapus_rasio/<?= $p['id_tb_rasio'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                            <a href="<?= base_url();?>sd/hapus_rasio/<?= $p['id_tb_rasio'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                         <?php endforeach;?>
                                     </td>
                                 </tr> 
@@ -227,7 +227,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="defaultModal">Tambah Data Sekolah Taman Kanak-Kanak</h4>
+                <h4 class="modal-title" id="defaultModal">Tambah Data Pendidikan Dasar</h4>
             </div>
             <div class="modal-body">
                 <!-- Advanced Validation -->
@@ -238,7 +238,7 @@
                                 <h4 class="modal-title" id="defaultModal">Data Setiap Kecamatan</h4>
                             </div>
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="tk/tambahDataTk">
+                                <form id="form_advanced_validation" method="post" action="sd/tambahDataSd">
                                     <div class="form-group">
                                         <div class="form-line">
                                             <p>Kecamatan</p>
@@ -294,7 +294,7 @@
                                 <h4 class="modal-title" id="defaultModal">Data Umum</h4>
                             </div>
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="tk/tambahDataTkUmum">
+                                <form id="form_advanced_validation" method="post" action="sd/tambahDataSdUmum">
                                     <div class="form-group">
                                         <div class="form-line">
                                             <p>Jumlah Pengelola Sekolah Negeri</p>
@@ -410,7 +410,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edit<?= $p['id_tb_jml_siswa'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>tk/hapus_siswa/<?= $p['id_tb_jml_siswa'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>sd/hapus_siswa/<?= $p['id_tb_jml_siswa'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -444,7 +444,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>tk/edit_peserta_siswa">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sd/edit_peserta_siswa">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_jml_siswa'];?>" name="id_tb_jml_siswa" required>
                                     <input type="hidden" class="form-control" value="<?= $p['kecamatan'];?>" name="kecamatan" required>
@@ -517,7 +517,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#editbg<?= $p['id_tb_bangunan_baik'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>tk/hapus_bg_baik/<?= $p['id_tb_bangunan_baik'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>sd/hapus_bg_baik/<?= $p['id_tb_bangunan_baik'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -551,7 +551,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>tk/edit_bg_baik">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sd/edit_bg_baik">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_bangunan_baik'];?>" name="id_tb_bangunan_baik" required>
                                     <input type="hidden" class="form-control" value="<?= $p['kecamatan'];?>" name="kecamatan" required>
@@ -624,7 +624,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edittdk<?= $p['id_tb_bangunan_tdk_baik'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>tk/hapus_bg_tdk_baik/<?= $p['id_tb_bangunan_tdk_baik'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>sd/hapus_bg_tdk_baik/<?= $p['id_tb_bangunan_tdk_baik'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -658,7 +658,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>tk/edit_bg_tdk_baik">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sd/edit_bg_tdk_baik">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_bangunan_tdk_baik'];?>" name="id_tb_bangunan_tdk_baik" required>
                                     <input type="hidden" class="form-control" value="<?= $p['kecamatan'];?>" name="kecamatan" required>
@@ -707,7 +707,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>tk/edit_pgl_negeri">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sd/edit_pgl_negeri">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_pengelola_negeri'];?>" name="id_tb_pengelola_negeri" required>
                                     <div class="form-group form-float ">
@@ -755,7 +755,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>tk/edit_pgl_swasta">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sd/edit_pgl_swasta">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_pengelola_swasta'];?>" name="id_tb_pengelola_swasta" required>
                                     <div class="form-group form-float ">
@@ -803,7 +803,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>tk/edit_rg_kelas">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sd/edit_rg_kelas">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_ruang_kelas'];?>" name="id_tb_ruang_kelas" required>
                                     <div class="form-group form-float ">
@@ -851,7 +851,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>tk/edit_pd_bersertifikat">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sd/edit_pd_bersertifikat">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_pendidik_bersertifikat'];?>" name="id_tb_pendidik_bersertifikat" required>
                                     <div class="form-group form-float ">
@@ -899,7 +899,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>tk/edit_pd_tdk_bersertifikat">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sd/edit_pd_tdk_bersertifikat">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_pendidik_tdk_bersertifikat'];?>" name="id_tb_pendidik_tdk_bersertifikat" required>
                                     <div class="form-group form-float ">
@@ -947,7 +947,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>tk/edit_rasio">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sd/edit_rasio">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_rasio'];?>" name="id_tb_rasio" required>
                                     <div class="form-group form-float ">

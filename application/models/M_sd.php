@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_Tk extends CI_Model {
+class M_Sd extends CI_Model {
     
     // tamplikan
-    public function getTk(){
+    public function getSd(){
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_jml_siswa');
         $this->db->where('tahun','2019');
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
 
@@ -16,7 +16,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_bangunan_baik');
         $this->db->where('tahun','2019');
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -24,7 +24,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_bangunan_tdk_baik');
         $this->db->where('tahun','2019');
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -32,7 +32,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_pengelola_negeri');
         $this->db->where('tahun','2019');
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -40,7 +40,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_pengelola_swasta');
         $this->db->where('tahun','2019');
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -48,7 +48,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_ruang_kelas');
         $this->db->where('tahun','2019');
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -56,7 +56,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_pendidik_bersertifikat');
         $this->db->where('tahun','2019');
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -64,7 +64,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_pendidik_tdk_bersertifikat');
         $this->db->where('tahun','2019');
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -72,72 +72,72 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(nilai) as total');
         $this->db->from('tb_rasio');
         $this->db->where('tahun','2019');
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
     public function getPesertaSiswa(){
         $this->db->where('tahun', '2019');
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_jml_siswa')->result_array();
     }
     
     public function getDataBgBaik(){
         $this->db->where('tahun', '2019');
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_bangunan_baik')->result_array();
     }
     
     public function getDataBgTdkBaik(){
         $this->db->where('tahun', '2019');
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_bangunan_tdk_baik')->result_array();
     }
     
     public function getDataPglNegeri(){
         $this->db->where('tahun', '2019');
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_pengelola_negeri')->result_array();
     }
     
     public function getDataPglSwasta(){
         $this->db->where('tahun', '2019');
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_pengelola_swasta')->result_array();
     }
     
     public function getDataRgKelas(){
         $this->db->where('tahun', '2019');
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_ruang_kelas')->result_array();
     }
     
     public function getDataPdBersertifikat(){
         $this->db->where('tahun', '2019');
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_pendidik_bersertifikat')->result_array();
     }
     
     public function getDataPdTdkBersertifikat(){
         $this->db->where('tahun', '2019');
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_pendidik_tdk_bersertifikat')->result_array();
     }
     
     public function getDataRasio(){
         $this->db->where('tahun', '2019');
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_rasio')->result_array();
     }
     // end tampilkan
     
     // tamplikan cari
-    public function getTkCari(){
+    public function getSdCari(){
         $keyword=$this->input->post('keyword');
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_jml_siswa');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
 
@@ -146,7 +146,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_bangunan_baik');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -155,7 +155,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_bangunan_tdk_baik');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -164,7 +164,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_pengelola_negeri');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -173,7 +173,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_pengelola_swasta');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -182,7 +182,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_ruang_kelas');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -191,7 +191,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_pendidik_bersertifikat');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -200,7 +200,7 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(jumlah) as total');
         $this->db->from('tb_pendidik_tdk_bersertifikat');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
@@ -209,70 +209,70 @@ class M_Tk extends CI_Model {
         $this->db->select('SUM(nilai) as total');
         $this->db->from('tb_rasio');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan','tk');
+        $this->db->where('tingkatan','sd');
         return $this->db->get()->row()->total;
     }
     
     public function getPesertaSiswaCari(){
         $keyword=$this->input->post('keyword');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_jml_siswa')->result_array();
     }
     
     public function getDataBgBaikCari(){
         $keyword=$this->input->post('keyword');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_bangunan_baik')->result_array();
     }
     
     public function getDataBgTdkBaikCari(){
         $keyword=$this->input->post('keyword');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_bangunan_tdk_baik')->result_array();
     }
     
     public function getDataPglNegeriCari(){
         $keyword=$this->input->post('keyword');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_pengelola_negeri')->result_array();
     }
     
     public function getDataPglSwastaCari(){
         $keyword=$this->input->post('keyword');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_pengelola_swasta')->result_array();
     }
     
     public function getDataRgKelasCari(){
         $keyword=$this->input->post('keyword');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_ruang_kelas')->result_array();
     }
     
     public function getDataPdBersertifikatCari(){
         $keyword=$this->input->post('keyword');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_pendidik_bersertifikat')->result_array();
     }
     
     public function getDataPdTdkBersertifikatCari(){
         $keyword=$this->input->post('keyword');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_pendidik_tdk_bersertifikat')->result_array();
     }
     
     public function getDataRasioCari(){
         $keyword=$this->input->post('keyword');
         $this->db->where('tahun', $keyword);
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->get('tb_rasio')->result_array();
     }
 
@@ -286,7 +286,7 @@ class M_Tk extends CI_Model {
         ];
         $this->db->where('tahun',$this->input->post('tahun'));
         $this->db->where('kecamatan',$this->input->post('kecamatan'));
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->update('tb_jml_siswa',$data);
     }
     
@@ -296,7 +296,7 @@ class M_Tk extends CI_Model {
         ];
         $this->db->where('tahun',$this->input->post('tahun'));
         $this->db->where('kecamatan',$this->input->post('kecamatan'));
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->update('tb_bangunan_baik',$data);
     }
     
@@ -306,7 +306,7 @@ class M_Tk extends CI_Model {
         ];
         $this->db->where('tahun',$this->input->post('tahun'));
         $this->db->where('kecamatan',$this->input->post('kecamatan'));
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->update('tb_bangunan_tdk_baik',$data);
     }
     
@@ -315,7 +315,7 @@ class M_Tk extends CI_Model {
             'jumlah' => $this->input->post('jumlah',true),
         ];
         $this->db->where('tahun',$this->input->post('tahun'));
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->update('tb_pengelola_negeri',$data);
     }
     
@@ -324,7 +324,7 @@ class M_Tk extends CI_Model {
             'jumlah' => $this->input->post('jumlah',true),
         ];
         $this->db->where('tahun',$this->input->post('tahun'));
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->update('tb_pengelola_swasta',$data);
     }
     
@@ -333,7 +333,7 @@ class M_Tk extends CI_Model {
             'jumlah' => $this->input->post('jumlah',true),
         ];
         $this->db->where('tahun',$this->input->post('tahun'));
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->update('tb_ruang_kelas',$data);
     }
     
@@ -342,7 +342,7 @@ class M_Tk extends CI_Model {
             'jumlah' => $this->input->post('jumlah',true),
         ];
         $this->db->where('tahun',$this->input->post('tahun'));
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->update('tb_pendidik_bersertifikat',$data);
     }
     
@@ -351,7 +351,7 @@ class M_Tk extends CI_Model {
             'jumlah' => $this->input->post('jumlah',true),
         ];
         $this->db->where('tahun',$this->input->post('tahun'));
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->update('tb_pendidik_tdk_bersertifikat',$data);
     }
     
@@ -360,14 +360,14 @@ class M_Tk extends CI_Model {
             'nilai' => $this->input->post('nilai',true),
         ];
         $this->db->where('tahun',$this->input->post('tahun'));
-        $this->db->where('tingkatan', 'tk');
+        $this->db->where('tingkatan', 'sd');
         return $this->db->update('tb_rasio',$data);
     }
     // end edit
 
-    public function tambahDataTkBaru(){
+    public function tambahDataSdBaru(){
         $nama_kecamatan = $this->input->post('nama_kecamatan', true);
-        $tingkatan = 'tk';
+        $tingkatan = 'sd';
         $tahun = $this->input->post('tahun', true);
         $data=[
             'kecamatan' => $nama_kecamatan,
@@ -392,9 +392,9 @@ class M_Tk extends CI_Model {
         $this->db->insert('tb_bangunan_tdk_baik', $data2);
     }
     
-    public function tambahDataTkUmumBaru(){
+    public function tambahDataSdUmumBaru(){
         
-        $tingkatan = 'tk';
+        $tingkatan = 'sd';
         $tahun = $this->input->post('tahun1', true);
         $data=[
             'tingkatan' => $tingkatan,

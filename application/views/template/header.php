@@ -148,7 +148,7 @@
                         </li>
 
                         <li id="menu2-4">
-                            <a href="">Pendidikan Dasar</a>
+                            <a href="<?= base_url();?>sd">Pendidikan Dasar</a>
                         </li>
                         <li id="menu2-5">
                             <a href="">Pendidikan Menengah Pertama</a>
