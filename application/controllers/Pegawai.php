@@ -40,7 +40,7 @@ class Pegawai extends CI_Controller {
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required|xss_clean|trim');
         $this->form_validation->set_rules('tmpt_ajar', 'Tempat Mengajar', 'required|xss_clean|trim');
         $this->form_validation->set_rules('kec', 'Kecamatan', 'required|xss_clean|trim');
-        $this->form_validation->set_rules('kel_des', 'Kelurahan / Desa', 'required|xss_clean|trim');
+        $this->form_validation->set_rules('status', 'Status', 'required|xss_clean|trim'); 
         if($this->form_validation->run()==FALSE){
             $data['pegawai']=$this->M_pegawai->getAllPegawai();
 			$this->load->view('template/header', $data);
@@ -81,7 +81,7 @@ class Pegawai extends CI_Controller {
         $this->form_validation->set_rules('jabatan1', 'Jabatan', 'required|xss_clean|trim');
         $this->form_validation->set_rules('tmpt_ajar1', 'Tempat Mengajar', 'required|xss_clean|trim');
         $this->form_validation->set_rules('kec1', 'Kecamatan', 'required|xss_clean');
-        $this->form_validation->set_rules('kel_des1', 'Kelurahan / Desa', 'required|xss_clean|trim');
+        $this->form_validation->set_rules('status1', 'Status', 'required|xss_clean|trim'); 
         if($this->form_validation->run()==FALSE){
             $data['pegawai']=$this->M_pegawai->getAllPegawai();
 			$this->load->view('template/header', $data);

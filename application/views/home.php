@@ -6,7 +6,7 @@
             
             <!-- Widgets -->
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="info-box bg-pink hover-zoom-effect">
                         <div class="icon">
                             <i class="material-icons">people</i>
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-cyan hover-zoom-effect">
                         <div class="icon">
                             <i class="material-icons">archive</i>
@@ -27,8 +27,8 @@
                             <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20"></div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                </div> -->
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="info-box bg-light-green hover-zoom-effect">
                         <div class="icon">
                             <i class="material-icons">forum</i>
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="info-box bg-orange hover-zoom-effect">
                         <div class="icon">
                             <i class="material-icons">person_add</i>

@@ -37,7 +37,7 @@
                                             <th>Pangkat</th>
                                             <th>Golongan</th>
                                             <th>Jabatan</th>
-                                            <th>Tempat Ajar</th>
+                                            <th>Instansi</th>
                                             <!-- <th>Kec</th>
                                             <th>Kel / Desa</th> -->
                                             <th>Aksi</th>
@@ -51,7 +51,7 @@
                                             <th>Pangkat</th>
                                             <th>Golongan</th>
                                             <th>Jabatan</th>
-                                            <th>Tempat Ajar</th>
+                                            <th>Instansi</th>
                                             <!-- <th>Kec</th>
                                             <th>Kel / Desa</th> -->
                                             <th>Aksi</th>
@@ -150,7 +150,7 @@
                                             <div class="form-group form-float">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control" name="tmpt_ajar" required>
-                                                    <label class="form-label">Tempat Mengajar</label>
+                                                    <label class="form-label">Instansi</label>
                                                 </div>
                                                 <div class="help-info"></div>
                                             </div>
@@ -164,14 +164,6 @@
                                                         <?php endforeach;?>
                                                     </select>
                                                 </div>
-                                            </div>
-                                            <br>
-                                            <div class="form-group form-float">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control" name="kel_des" required>
-                                                    <label class="form-label">Kelurahan / Desa</label>
-                                                </div>
-                                                <div class="help-info"></div>
                                             </div>
                                             <br>
                                             <div class="form-group">
@@ -272,7 +264,7 @@
                                             <div class="form-group form-float">
                                                 <div class="form-line">
                                                     <input type="text" class="form-control" name="tmpt_ajar1" required value="<?= $pgw['tmpt_ajar'];?>">
-                                                    <label class="form-label">Tempat Mengajar</label>
+                                                    <label class="form-label">Instansi</label>
                                                 </div>
                                                 <div class="help-info"></div>
                                             </div>
@@ -292,13 +284,6 @@
                                                 </div>
                                             </div>
                                             <br>
-                                            <div class="form-group form-float">
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control" name="kel_des1" required value="<?= $pgw['kel_des'];?>">
-                                                    <label class="form-label">Kelurahan / Desa</label>
-                                                </div>
-                                                <div class="help-info"></div>
-                                            </div>
                                             <br>
                                             <div class="form-group">
                                                 <div class="form-line">

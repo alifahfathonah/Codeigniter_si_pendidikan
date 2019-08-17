@@ -18,15 +18,27 @@ class Login extends CI_Controller {
             $valid = $this->M_login->usercheck();
             if($valid->num_rows() > 0){
                 $data = $valid->row_array();
-                $id = $data['id_user'];
-                $user = $data['username'];
-                $sesdata = [
-                    'id' => $id,
-                    'username' => $user,
-                    'logged_in_admin' => true
-                ];
-                $this->session->set_userdata($sesdata);
-                redirect('home');
+                if($data['level']=='admin'){
+                    $id = $data['id_user'];
+                    $user = $data['username'];
+                    $sesdata = [
+                        'id' => $id,
+                        'username' => $user,
+                        'logged_in_admin' => true
+                    ];
+                    $this->session->set_userdata($sesdata);
+                    redirect('home');
+                }else if($data['level']=='kadis'){
+                    $id = $data['id_user'];
+                    $user = $data['username'];
+                    $sesdata = [
+                        'id' => $id,
+                        'username' => $user,
+                        'logged_in_admin_kadis' => true
+                    ];
+                    $this->session->set_userdata($sesdata);
+                    redirect('kadis');
+                }
             }else{
                 // $this->session->set_flashdata('msg','Username or Password is Wrong');
                 redirect('login');

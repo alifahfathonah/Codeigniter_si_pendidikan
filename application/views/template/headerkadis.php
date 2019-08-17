@@ -97,8 +97,6 @@
                         <span class="label-count"></span>
                     </a>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="<?= base_url();?>administrator"><i class="material-icons">person</i>Admin</a></li>
-                        <li role="separator" class="divider"></li>
                         <li><a href="<?= base_url();?>login/logout" onclick="return confirm('Apakah Anda yakin ingin keluar?')"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
                 </li>
@@ -125,12 +123,6 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
-                <li id="menu1">
-                    <a href="<?= base_url();?>">
-                        <i class="material-icons">dashboard</i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
                 <li id="menu2">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">swap_calls</i>
@@ -138,52 +130,28 @@
                     </a>
                     <ul class="ml-menu">
                         <li id="menu2-1">
-                            <a href="<?= base_url();?>pendidikanusia">Penduduk Berdasarkan Usia Sekolah</a>
+                            <a href="<?= base_url();?>kadis">Penduduk Berdasarkan Usia Sekolah</a>
                         </li>
                         <li id="menu2-2">
-                            <a href="<?= base_url();?>paud">Pendidikan Anak Usia Dini</a>
+                            <a href="<?= base_url();?>kadis/paud">Pendidikan Anak Usia Dini</a>
                         </li>
                         <li id="menu2-3">
-                            <a href="<?= base_url();?>tk">Sekolah Taman Kanak-Kanak</a>
+                            <a href="<?= base_url();?>kadis/tk">Sekolah Taman Kanak-Kanak</a>
                         </li>
 
                         <li id="menu2-4">
-                            <a href="<?= base_url();?>sd">Pendidikan Dasar</a>
+                            <a href="<?= base_url();?>kadis/sd">Pendidikan Dasar</a>
                         </li>
                         <li id="menu2-5">
-                            <a href="<?= base_url();?>smp">Pendidikan Menengah Pertama</a>
+                            <a href="<?= base_url();?>kadis/smp">Pendidikan Menengah Pertama</a>
                         </li>
                         <li id="menu2-6">
-                            <a href="<?= base_url();?>sma">Pendidikan Menengah Atas dan Kejuruan</a>
+                            <a href="<?= base_url();?>kadis/sma">Pendidikan Menengah Atas dan Kejuruan</a>
                         </li>
                         <!-- <li id="menu2-7">
                             <a href="">Pendidikan Non-Formal</a>
                         </li> -->
                     </ul>
-                </li>
-                <li id="menu3">
-                    <a href="<?= base_url();?>pegawai">
-                        <i class="material-icons">people</i>
-                        <span>Kepegawaian </span>
-                    </a>
-                </li>
-                <!-- <li id="menu6">
-                    <a href="<?= base_url();?>absen">
-                        <i class="material-icons">archive</i>
-                        <span>Absen </span>
-                    </a>
-                </li> -->
-                <li id="menu4">
-                    <a href="<?= base_url();?>konsultasi">
-                        <i class="material-icons">forum</i>
-                        <span>Konsultasi </span>
-                    </a>
-                </li>
-                <li id="menu5">
-                    <a href="<?= base_url();?>administrator">
-                        <i class="material-icons">assignment_ind</i>
-                        <span>Administrator </span>
-                    </a>
                 </li>
             </ul>
         </div>
