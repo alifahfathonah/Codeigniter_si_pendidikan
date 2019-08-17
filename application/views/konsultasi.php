@@ -13,7 +13,7 @@
             <?php foreach($pesan as $pes):?>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="card">
-                    <?php if($pes['status_admin']=='sudah dibaca'){?>
+                    <?php if($pes['status']=='sudah dibaca'){?>
                     <div class="header bg-blue-grey">
                     <?php }else{?>
                     <div class="header bg-cyan">
@@ -21,7 +21,7 @@
                     <h2>
                         <?= $pes['kecamatan'];?> 
                         <small><?= $pes['judul_konsultasi'];?></small>
-                        <small>Status Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?= $pes['status_admin'];?></small>
+                        <small>Status Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?= $pes['status'];?></small>
                         <small>Diterima tanggal : <?= $pes['tgl_kirim'];?></small>
                     </h2>
                     <ul class="header-dropdown m-r--5">
@@ -32,18 +32,10 @@
                             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="material-icons">more_vert</i>
                             </a>
-                            <?php if($pes['status_admin']=='sudah dibaca'){?>
                             <ul class="dropdown-menu pull-right">
                                 <li><a href="" data-toggle="modal" data-target="#pesanModal<?= $pes['id_konsultasi'];?>">Buka Pesan Konsultasi</a></li>
-                                <li><a href="javascript:void(0);">Hapus Pesan</a></li>
+                                <li><a href="<?= base_url();?>konsultasi/hapus/<?= $pes['id_konsultasi'];?>">Hapus Pesan</a></li>
                             </ul>
-                            <?php }else{?>
-                            <ul class="dropdown-menu pull-right">
-                                <li><a href="" data-toggle="modal" data-target="#pesanModal<?= $pes['id_konsultasi'];?>">Buka Pesan Konsultasi</a></li>
-                                <li><a href="<?= base_url();?>konsultasi/dibaca/<?= $pes['id_konsultasi'];?>">Tandai Telah Dibaca</a></li>
-                                <li><a href="javascript:void(0);">Hapus Pesan</a></li>
-                            </ul>
-                            <?php } ?>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +62,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="card">
-                                <?php if($pes['status_admin']=='sudah dibaca'){?>
+                                <?php if($pes['status']=='sudah dibaca'){?>
                                 <div class="header bg-blue-grey">
                                 <?php }else{?>
                                 <div class="header bg-cyan">
@@ -78,7 +70,7 @@
                                 <h2>
                                     <?= $pes['kecamatan'];?> 
                                     <small><?= $pes['judul_konsultasi'];?></small>
-                                    <small>Status Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?= $pes['status_admin'];?></small>
+                                    <small>Status Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?= $pes['status'];?></small>
                                     <small>Diterima tanggal : <?= $pes['tgl_kirim'];?></small>
                                 </h2>
                             </div>
@@ -113,7 +105,7 @@
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
-                            <?php if($pes['status_admin']=='sudah dibaca'){?>
+                            <?php if($pes['status']=='sudah dibaca'){?>
                             <div class="header bg-blue-grey">
                             <?php }else{?>
                             <div class="header bg-cyan">
@@ -121,7 +113,7 @@
                             <h2>
                                 <?= $pes['kecamatan'];?> 
                                 <small><?= $pes['judul_konsultasi'];?></small>
-                                <small>Status Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?= $pes['status_admin'];?></small>
+                                <small>Status Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?= $pes['status'];?></small>
                                 <small>Diterima tanggal : <?= $pes['tgl_kirim'];?></small>
                             </h2>
                         </div>

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_Konsultasi extends CI_Model {
     
     public function getAllKonsultasi(){
-        $query="SELECT * FROM konsultasi ORDER BY status_admin ASC";
+        $query="SELECT * FROM konsultasi WHERE hapus_admin = 'no' ORDER BY status ASC";
         return $this->db->query($query)->result_array();;
         // return $this->db->get('konsultasi')->result_array();
         // return $query->result_array();
@@ -17,10 +17,19 @@ class M_Konsultasi extends CI_Model {
         $tanggal = date("Y-m-d H:i:s");
         $data = [
             'isi_balasan' => $tanggap,
-            'status_admin' => 'sudah dibaca',
+            'status' => 'sudah dibaca',
             'tgl_balas' => $tanggal
         ];
         $this->db->where('id_konsultasi',$id_konsultasi);
+        return $this->db->update('konsultasi',$data);
+    }
+
+    public function hapusDataKonsultasi(){
+        $id = $this->uri->segment(3);
+        $data=[
+            'hapus_admin' => 'yes'
+        ];
+        $this->db->where('id_konsultasi',$id);
         return $this->db->update('konsultasi',$data);
     }
 }

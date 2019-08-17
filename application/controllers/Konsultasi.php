@@ -27,4 +27,10 @@ class Konsultasi extends CI_Controller {
         $this->session->set_flashdata('konsultasi', 'Ditanggapi');
         redirect('konsultasi');
     }
+
+    public function hapus(){
+        $this->M_konsultasi->hapusDataKonsultasi();
+        $this->session->set_flashdata('konsultasi', 'Ditanggapi');
+        redirect('konsultasi');
+    }
 }
