@@ -144,7 +144,7 @@
                             <a href="<?= base_url();?>paud">Pendidikan Anak Usia Dini</a>
                         </li>
                         <li id="menu2-3">
-                            <a href="">Sekolah Taman Kanak-Kanak</a>
+                            <a href="<?= base_url();?>tk">Sekolah Taman Kanak-Kanak</a>
                         </li>
 
                         <li id="menu2-4">
@@ -156,9 +156,9 @@
                         <li id="menu2-6">
                             <a href="">Pendidikan Menengah Atas dan Kejuruan</a>
                         </li>
-                        <li id="menu2-7">
+                        <!-- <li id="menu2-7">
                             <a href="">Pendidikan Non-Formal</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 <li id="menu3">

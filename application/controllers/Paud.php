@@ -56,12 +56,12 @@ class Paud extends CI_Controller {
             $this->db->where('berdasarkan', $berdasarkan);
             $this->db->where('tahun', $tahun);
             $hasil=$this->db->get('paud');
-            $data=[
-                'nama_kecamatan' => $nama_kecamatan,
-                'berdasarkan' => $berdasarkan,
-                'jumlah' => $jumlah,
-                'tahun' => $tahun
-            ];
+            // $data=[
+            //     'nama_kecamatan' => $nama_kecamatan,
+            //     'berdasarkan' => $berdasarkan,
+            //     'jumlah' => $jumlah,
+            //     'tahun' => $tahun
+            // ];
             if($hasil->num_rows()<=0){
                 $this->M_paud->tambahDataPaudBaru();
                 $this->session->set_flashdata('pbu', 'Ditambahkan');

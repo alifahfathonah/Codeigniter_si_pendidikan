@@ -9,7 +9,7 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Data Penduduk Berdasarkan Usia Sekolah
+                                Data Pendidikan Anak Usia Dini
                                 <!-- <small>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</small> -->
                             </h2>
                             <hr>
