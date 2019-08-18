@@ -17,9 +17,23 @@ class Konsultasi extends CI_Controller {
         $data['sidebar']='#menu4';
         $data['sidebar1']='';
         $data['pesan'] = $this->M_konsultasi->getAllKonsultasi();
+        $data['kec'] = $this->M_konsultasi->getAllKecamatan();
         $this->load->view('template/header',$data);
         $this->load->view('konsultasi',$data);
         $this->load->view('template/footer');
+    }
+
+    public function kirim(){
+        $this->form_validation->set_rules('nama_kecamatan', '"Kecamatan"', 'required|xss_clean');
+        $this->form_validation->set_rules('judul_konsultasi', '"Perihal"', 'required|xss_clean');
+        $this->form_validation->set_rules('isi_konsultasi', 'Isi Konsultasi', 'required|xss_clean|trim'); 
+        if($this->form_validation->run()==FALSE){
+            $this->index();
+		}else{
+            $this->M_konsultasi->kirimDataKonsultasi();
+            $this->session->set_flashdata('konsultasi', 'Ditanggapi');
+            redirect('konsultasi');
+		}
     }
 
     public function tanggap($id_konsultasi){

@@ -167,12 +167,12 @@
                         <span>Kepegawaian </span>
                     </a>
                 </li>
-                <!-- <li id="menu6">
+                <li id="menu6">
                     <a href="<?= base_url();?>absen">
                         <i class="material-icons">archive</i>
                         <span>Absen </span>
                     </a>
-                </li> -->
+                </li>
                 <li id="menu4">
                     <a href="<?= base_url();?>konsultasi">
                         <i class="material-icons">forum</i>

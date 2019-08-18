@@ -5,7 +5,7 @@ class M_Konsultasi_Uptd extends CI_Model {
     
     public function getAllKonsultasi(){
         $kec = $this->session->userdata('username');
-        $query="SELECT * FROM konsultasi  WHERE kecamatan ='".$kec."' AND hapus_uptd='no' ORDER BY status ASC";
+        $query="SELECT * FROM konsultasi  WHERE kecamatan ='".$kec."' AND hapus_uptd='no' ORDER BY status DESC";
         return $this->db->query($query)->result_array();;
         // return $this->db->get('konsultasi')->result_array();
         // return $query->result_array();
@@ -33,7 +33,9 @@ class M_Konsultasi_Uptd extends CI_Model {
             'judul_konsultasi' => $this->input->post('judul_konsultasi', true),
             'isi_konsultasi' => $this->input->post('judul_konsultasi', true),
             'status' => 'belum dibaca',
-            'tgl_kirim' => $tanggal
+            'tgl_kirim' => $tanggal,
+            'hapus_uptd' => 'no',
+            'hapus_admin' => 'no'
         ];
         $this->db->insert('konsultasi',$data);
     }

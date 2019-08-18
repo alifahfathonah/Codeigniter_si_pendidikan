@@ -1,32 +1,32 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Absen extends CI_Controller {
+class AbsenUptd extends CI_Controller {
 
 	public function __construct(){
 
         parent::__construct();
-        if($this->session->userdata('logged_in_admin') !== TRUE){
+        if($this->session->userdata('logged_in_admin_uptd') !== TRUE){
             redirect('login');
         }
         $this->load->library('upload');
-        $this->load->model('M_absen');
+        $this->load->model('M_absen_uptd');
     }
 
     public function index(){
         $data['sidebar']='#menu6';
         $data['sidebar1']='';
-        $data['kecamatan']=$this->M_absen->getAllKecamatan();
-        $data['dataabsen'] = $this->M_absen->getDataAbsen();
+        // $data['kecamatan']=$this->M_absen_uptd->getAllKecamatan();
+        $data['dataabsen'] = $this->M_absen_uptd->getDataAbsen();
         $data['bulan'] = [
             'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
             'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
         ];
-        $data['tahun']=$this->M_absen->getAllTahun();
+        $data['tahun']=$this->M_absen_uptd->getAllTahun();
 
-        $this->load->view('template/header', $data);
-        $this->load->view('absen', $data);
-        $this->load->view('template/footer');
+        $this->load->view('template/headeruptd', $data);
+        $this->load->view('absen_uptd', $data);
+        $this->load->view('template/footeruptd');
     }
 
     public function insert_absen(){
@@ -43,15 +43,14 @@ class Absen extends CI_Controller {
                 if ( $this->upload->do_upload('fotopost') ) {
                     $foto = $this->upload->data();
                     $data = [
-                        'kecamatan' => $this->input->post('kecamatan',true),
+                        'kecamatan' => $this->session->userdata('username'),
                         'bulan' => $this->input->post('bulan',true),
                         'tahun' => $this->input->post('tahun',true),
-                        'gambar' => $foto['file_name'],
-                        
+                        'gambar' => $foto['file_name']
                     ];
-                    $this->M_absen->insert($data);
+                    $this->M_absen_uptd->insert($data);
                     $this->session->set_flashdata('absen', 'Ditambahkan');
-                    redirect('absen');
+                    redirect('absenuptd');
                 }else {
                     die("gagal upload");
                 }
@@ -78,28 +77,28 @@ class Absen extends CI_Controller {
             if ( $this->upload->do_upload('fotopost1') ) {
                 $foto = $this->upload->data();
                 $data = [
-                    'kecamatan' => $this->input->post('kecamatan1',true),
+                    'kecamatan' => $this->session->userdata('username'),
                     'bulan' => $this->input->post('bulan1',true),
                     'tahun' => $this->input->post('tahun1',true),
                     'gambar' => $foto['file_name'],
                 ];
                 // hapus foto pada direktori
                 @unlink($path.$this->input->post('filelama'));
-                $this->M_absen->update($data,$kondisi);
+                $this->M_absen_uptd->update($data,$kondisi);
                 $this->session->set_flashdata('absen', 'Diupdate');
-                redirect('absen');
+                redirect('absenuptd');
             }else {
                 die("gagal update");
             }
         }else {
             $data = [
-                'kecamatan' => $this->input->post('kecamatan1',true),
+                'kecamatan' => $this->session->userdata('username'),
                 'bulan' => $this->input->post('bulan1',true),
                 'tahun' => $this->input->post('tahun1',true)
             ];
-            $this->M_absen->update($data,$kondisi);
+            $this->M_absen_uptd->update($data,$kondisi);
             $this->session->set_flashdata('absen', 'Diupdate');
-            redirect('absen');
+            redirect('absenuptd');
         }
     }
 
@@ -107,15 +106,15 @@ class Absen extends CI_Controller {
         $path = './assets/images/absen';
         @unlink($path.$foto);
         $where = array('id_absen' => $id );
-        $this->M_absen->delete($where);
+        $this->M_absen_uptd->delete($where);
         $this->session->set_flashdata('absen', 'Dihapus');
-        return redirect('absen');
+        return redirect('absenuptd');
     }
 
     // public function getSekolahKecamatan(){
     //     $nama_kecamatan = $this->input->post('kecamatan');
     //     // $nama_kecamatan = $this->uri->segment(3);
-    //     $data = $this->M_absen->getSubSekolahKecamatan($nama_kecamatan);
+    //     $data = $this->M_absen_uptd->getSubSekolahKecamatan($nama_kecamatan);
     //     echo json_encode($data);
     // }
 }

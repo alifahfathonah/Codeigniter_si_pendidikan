@@ -18,6 +18,7 @@ class HomeUptd extends CI_Controller {
 		$data['pegawai'] = $this->M_home_uptd->getJmlPegawai();
 		$data['konsultasi'] = $this->M_home_uptd->getJmlKonsultasi();
 		$data['user'] = $this->M_home_uptd->getJmlUser();
+		$data['absen'] = $this->M_home_uptd->getJmlAbsen();
 
 		$this->load->view('template/headeruptd',$data);
 		$this->load->view('homeuptd',$data);

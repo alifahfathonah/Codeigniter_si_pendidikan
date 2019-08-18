@@ -1,17 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_Absen extends CI_Model {
+class M_Absen_Uptd extends CI_Model {
     
-    public function getAllKecamatan(){
-        return $this->db->get('kecamatan')->result_array();
-    }
+    // public function getAllKecamatan(){
+    //     return $this->db->get('kecamatan')->result_array();
+    // }
     
     public function getAllTahun(){
         return $this->db->get('tb_tahun')->result_array();
     }
 
     public function getDataAbsen(){
+        $this->db->where('kecamatan',$this->session->userdata('username'));
         return $this->db->get('absen')->result_array();
     }
 

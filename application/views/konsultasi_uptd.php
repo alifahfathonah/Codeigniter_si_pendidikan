@@ -25,7 +25,7 @@
                     <h2>
                         <?= $pes['kecamatan'];?> 
                         <small><?= $pes['judul_konsultasi'];?></small>
-                        <small>Status Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?= $pes['status'];?></small>
+                        
                         <small>Diterima tanggal : <?= $pes['tgl_kirim'];?></small>
                     </h2>
                     <ul class="header-dropdown m-r--5">
@@ -53,3 +53,47 @@
         </div>
     </div>
 </section>
+<!-- Default Size -->
+<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="defaultModal">Kirim Konsultasi Baru</h4>
+            </div>
+            <div class="modal-body">
+                <!-- Advanced Validation -->
+                <div class="row clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="body">
+                                <form id="form_advanced_validation" method="post" action="konsultasiuptd/kirim">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" name="judul_konsultasi" required>
+                                            <label class="form-label">Perihal</label>
+                                        </div>
+                                        <div class="help-info"></div>
+                                    </div>
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                        <h6>Isi Konsultasi</h6>
+                                            <input type="text" class="form-control" name="isi_konsultasi" required>
+                                            <label class="form-label"></label>
+                                        </div>
+                                        <div class="help-info"></div>
+                                    </div>
+                                    <button class="btn btn-primary waves-effect" type="submit">Kirim</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #END# Advanced Validation -->
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-link waves-effect">SAVE CHANGES</button>
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
+            </div> -->
+        </div>
+    </div>
+</div>

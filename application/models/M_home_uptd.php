@@ -25,6 +25,16 @@ class M_Home_Uptd extends CI_Model {
         }
     }
     
+    public function getJmlAbsen(){
+        $this->db->where('kecamatan',$this->session->userdata('username'));
+        $query = $this->db->get('absen');
+        if($query->num_rows()>0){
+            return $query->num_rows();
+        }else{
+            return 0;
+        }
+    }
+    
     public function getJmlUser(){
         // $this->db->where('hapus_admin','no');
         $this->db->where('username',$this->session->userdata('username'));
