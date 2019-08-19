@@ -10,6 +10,12 @@
                   Data administrator <strong>berhasil</strong> <?= $this->session->flashdata('admin');?>
                 </div>
             <?php endif;?>
+            <?php if($this->session->flashdata('admin1')):?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <?= $this->session->flashdata('admin1');?>
+                </div>
+            <?php endif;?>
             <?php if(validation_errors()):?>
               <div class="alert alert-danger" role="alert">
                 <?= validation_errors();?>
@@ -111,6 +117,17 @@
                                                 </div>
                                                 <div class="help-info"></div>
                                             </div>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <p>Level</p>
+                                                    <select class="form-control show-tick" name="level">
+                                                        <option></option>
+                                                        <?php foreach($level as $l):?>
+                                                            <option value="<?= $l;?>"><?= $l;?></option>
+                                                        <?php endforeach;?>
+                                                    </select>
+                                                </div>
+                                            </div>
                                             <button class="btn btn-primary waves-effect" type="submit">Tambah</button>
                                         </form>
                                     </div>
@@ -155,6 +172,21 @@
                                                     <label class="form-label">Password</label>
                                                 </div>
                                                 <div class="help-info"></div>
+                                            </div>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <p>Level</p>
+                                                    <select class="form-control show-tick" name="level">
+                                                        <option></option>
+                                                        <?php foreach($level as $l):?>
+                                                        <?php if($l == $ad['level']):?>
+                                                            <option value="<?= $l;?>" selected><?= $l;?></option>
+                                                        <?php else :?>
+                                                            <option value="<?= $l;?>"><?= $l;?></option>
+                                                        <?php endif;?>
+                                                        <?php endforeach;?>
+                                                    </select>
+                                                </div>
                                             </div>
                                             <button class="btn btn-primary waves-effect" type="submit">Update</button>
                                         </form>

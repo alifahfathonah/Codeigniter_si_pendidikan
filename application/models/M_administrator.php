@@ -11,8 +11,16 @@ class M_Administrator extends CI_Model {
         $dataAdmin = [
             'username' => $this->input->post('username', true),
             'password' => md5($this->input->post('password', true)),
+            'level' => $this->input->post('level', true)
         ];
         $this->db->insert('user',$dataAdmin);
+        
+        if($this->input->post('level')=='uptd'){
+            $dataKec = [
+                'nama_kecamatan' => $this->input->post('username', true),
+            ];
+            $this->db->insert('kecamatan',$dataKec);
+        }
         
     }
     public function editAdmin(){
