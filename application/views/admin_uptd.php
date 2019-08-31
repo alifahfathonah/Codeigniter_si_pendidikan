@@ -51,7 +51,7 @@
                                             <td><?= $ad['password'];?></td>
                                             <td>
                                                 <a href="" class="btn btn-default" style="padding: 2px" data-toggle="modal" data-target="#editModal<?= $ad['id_user'];?>"><i class="fa fa-edit"></i></a>
-                                                <a href="<?= base_url();?>administratoruptd/hapus_admin/<?= $ad['id_user'];?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-default" style="padding: 2px"><i class="fa fa-trash-o"></i></a>
+                                                <a href="<?= base_url();?>administratorUptd/hapus_admin/<?= $ad['id_user'];?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-default" style="padding: 2px"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                         <?php $i++;?>
@@ -122,11 +122,12 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="card">
                                     <div class="body">
-                                        <form id="form_advanced_validation" method="post" action="<?= base_url();?>administratoruptd/edit_admin/<?= $ad['id_user'];?>">
+                                        <form id="form_advanced_validation" method="post" action="<?= base_url();?>administratorUptd/edit_admin/<?= $ad['id_user'];?>">
                                             
                                             <div class="form-group form-float">
                                                 <div class="form-line">
-                                                    <input type="text" class="form-control" name="username" required value="<?= $ad['username'];?>">
+                                                    <input type="hidden" class="form-control" name="username" required value="<?= $ad['username'];?>">
+                                                    <input disabled type="text" class="form-control" name="username" required value="<?= $ad['username'];?>">
                                                     <label class="form-label">Username</label>
                                                 </div>
                                                 <div class="help-info"></div>

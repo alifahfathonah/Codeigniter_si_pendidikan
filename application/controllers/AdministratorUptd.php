@@ -26,7 +26,7 @@ class AdministratorUptd extends CI_Controller {
 		}else{
 			$this->M_administrator_uptd->tambahAdmin();
 			$this->session->set_flashdata('admin', 'Ditambahkan');
-			redirect('administratoruptd');
+			redirect('administratorUptd');
 		}
     }
 
@@ -43,13 +43,13 @@ class AdministratorUptd extends CI_Controller {
 		}else{
 			$this->M_administrator_uptd->editAdmin();
 			$this->session->set_flashdata('admin', 'Ditambahkan');
-			redirect('administratoruptd');
+			redirect('administratorUptd');
         } 
     }
 
     public function hapus_admin($id_admin){
         $this->M_administrator_uptd->hapusAdmin($id_admin);
 		$this->session->set_flashdata('admin', 'Dihapus');
-		redirect('administratoruptd');
+		redirect('administratorUptd');
     }
 }

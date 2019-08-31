@@ -14,7 +14,7 @@
                             </h2>
                             <hr>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Pendidikan</a>
-                            <a href="<?= base_url();?>pendidikanusiauptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
+                            <a href="<?= base_url();?>pendidikanUsiaUptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
                             <hr>
                             <form method="post" action="">
                                 <div class="row clearfix">
@@ -132,7 +132,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="pendidikanusiauptd/tambahDataPendidikan">
+                                <form id="form_advanced_validation" method="post" action="pendidikanUsiaUptd/tambahDataPendidikan">
                                     <div class="form-group">
                                         <div class="form-line">
                                             <p>Kecamatan</p>
@@ -227,7 +227,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edit<?= $p['id_pendidikan_usia'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>pendidikanusiauptd/hapus_pendidikan_usia/<?= $p['id_pendidikan_usia'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>pendidikanUsiaUptd/hapus_pendidikan_usia/<?= $p['id_pendidikan_usia'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -261,7 +261,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pendidikanusiauptd/edit_pendidikan0_6">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pendidikanUsiaUptd/edit_pendidikan0_6">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_pendidikan_usia'];?>" name="id_pendidikan_usia" required>
                                     <input type="hidden" class="form-control" value="<?= $p['nama_kecamatan'];?>" name="nama_kecamatan" required>
@@ -335,7 +335,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edit<?= $p['id_pendidikan_usia'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>pendidikanusiauptd/hapus_pendidikan_usia/<?= $p['id_pendidikan_usia'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>pendidikanUsiaUptd/hapus_pendidikan_usia/<?= $p['id_pendidikan_usia'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -369,7 +369,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pendidikanusiauptd/edit_pendidikan7_12">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pendidikanUsiaUptd/edit_pendidikan7_12">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_pendidikan_usia'];?>" name="id_pendidikan_usia" required>
                                     <input type="hidden" class="form-control" value="<?= $p['nama_kecamatan'];?>" name="nama_kecamatan" required>
@@ -443,7 +443,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edit<?= $p['id_pendidikan_usia'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>pendidikanusiauptd/hapus_pendidikan_usia/<?= $p['id_pendidikan_usia'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>pendidikanUsiaUptd/hapus_pendidikan_usia/<?= $p['id_pendidikan_usia'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -477,7 +477,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pendidikanusiauptd/edit_pendidikan13_15">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pendidikanUsiaUptd/edit_pendidikan13_15">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_pendidikan_usia'];?>" name="id_pendidikan_usia" required>
                                     <input type="hidden" class="form-control" value="<?= $p['nama_kecamatan'];?>" name="nama_kecamatan" required>
@@ -551,7 +551,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edit<?= $p['id_pendidikan_usia'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>pendidikanusiauptd/hapus_pendidikan_usia/<?= $p['id_pendidikan_usia'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>pendidikanUsiaUptd/hapus_pendidikan_usia/<?= $p['id_pendidikan_usia'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -585,7 +585,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pendidikanusiauptd/edit_pendidikan16_18">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pendidikanUsiaUptd/edit_pendidikan16_18">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_pendidikan_usia'];?>" name="id_pendidikan_usia" required>
                                     <input type="hidden" class="form-control" value="<?= $p['nama_kecamatan'];?>" name="nama_kecamatan" required>

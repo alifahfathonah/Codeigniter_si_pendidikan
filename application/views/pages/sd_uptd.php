@@ -14,7 +14,7 @@
                             </h2>
                             <hr>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Pendidikan Dasar</a>
-                            <a href="<?= base_url();?>sduptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
+                            <a href="<?= base_url();?>sdUptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
                             <hr>
                             <form method="post" action="">
                                 <div class="row clearfix">
@@ -213,7 +213,7 @@
                                 <h4 class="modal-title" id="defaultModal">Data Setiap Kecamatan</h4>
                             </div>
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="sduptd/tambahDataSd">
+                                <form id="form_advanced_validation" method="post" action="sdUptd/tambahDataSd">
                                     <div class="form-group">
                                         <div class="form-line">
                                             <p>Kecamatan</p>
@@ -313,7 +313,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edit<?= $p['id_tb_jml_siswa'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>sduptd/hapus_siswa/<?= $p['id_tb_jml_siswa'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>sdUptd/hapus_siswa/<?= $p['id_tb_jml_siswa'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -347,7 +347,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sduptd/edit_peserta_siswa">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sdUptd/edit_peserta_siswa">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_jml_siswa'];?>" name="id_tb_jml_siswa" required>
                                     <input type="hidden" class="form-control" value="<?= $p['kecamatan'];?>" name="kecamatan" required>
@@ -420,7 +420,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#editbg<?= $p['id_tb_bangunan_baik'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>sduptd/hapus_bg_baik/<?= $p['id_tb_bangunan_baik'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>sdUptd/hapus_bg_baik/<?= $p['id_tb_bangunan_baik'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -454,7 +454,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sduptd/edit_bg_baik">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sdUptd/edit_bg_baik">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_bangunan_baik'];?>" name="id_tb_bangunan_baik" required>
                                     <input type="hidden" class="form-control" value="<?= $p['kecamatan'];?>" name="kecamatan" required>
@@ -527,7 +527,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edittdk<?= $p['id_tb_bangunan_tdk_baik'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>sduptd/hapus_bg_tdk_baik/<?= $p['id_tb_bangunan_tdk_baik'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>sdUptd/hapus_bg_tdk_baik/<?= $p['id_tb_bangunan_tdk_baik'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -561,7 +561,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sduptd/edit_bg_tdk_baik">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sdUptd/edit_bg_tdk_baik">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_bangunan_tdk_baik'];?>" name="id_tb_bangunan_tdk_baik" required>
                                     <input type="hidden" class="form-control" value="<?= $p['kecamatan'];?>" name="kecamatan" required>
@@ -610,7 +610,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sduptd/edit_pgl_negeri">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sdUptd/edit_pgl_negeri">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_pengelola_negeri'];?>" name="id_tb_pengelola_negeri" required>
                                     <div class="form-group form-float ">
@@ -658,7 +658,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sduptd/edit_pgl_swasta">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sdUptd/edit_pgl_swasta">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_pengelola_swasta'];?>" name="id_tb_pengelola_swasta" required>
                                     <div class="form-group form-float ">
@@ -706,7 +706,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sduptd/edit_rg_kelas">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sdUptd/edit_rg_kelas">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_ruang_kelas'];?>" name="id_tb_ruang_kelas" required>
                                     <div class="form-group form-float ">
@@ -754,7 +754,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sduptd/edit_pd_bersertifikat">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sdUptd/edit_pd_bersertifikat">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_pendidik_bersertifikat'];?>" name="id_tb_pendidik_bersertifikat" required>
                                     <div class="form-group form-float ">
@@ -802,7 +802,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sduptd/edit_pd_tdk_bersertifikat">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sdUptd/edit_pd_tdk_bersertifikat">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_pendidik_tdk_bersertifikat'];?>" name="id_tb_pendidik_tdk_bersertifikat" required>
                                     <div class="form-group form-float ">
@@ -850,7 +850,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sduptd/edit_rasio">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>sdUptd/edit_rasio">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_tb_rasio'];?>" name="id_tb_rasio" required>
                                     <div class="form-group form-float ">

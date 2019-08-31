@@ -24,7 +24,7 @@
                             </h2>
                             <hr>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Pegawai</a>
-                            <a href="<?= base_url();?>pegawaiuptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
+                            <a href="<?= base_url();?>pegawaiUptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
                         </div>
                         <div class="body">
                             <div class="table-responsive">
@@ -74,7 +74,7 @@
                                             */?>
                                             <td>
                                                 <a href="" class="btn btn-default" style="padding: 2px" data-toggle="modal" data-target="#editModal<?= $pgw['id_pegawai'];?>"><i class="fa fa-edit"></i></a>
-                                                <a href="<?= base_url();?>pegawaiuptd/hapus_pegawai/<?= $pgw['id_pegawai'];?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-default" style="padding: 2px"><i class="fa fa-trash-o"></i></a>
+                                                <a href="<?= base_url();?>pegawaiUptd/hapus_pegawai/<?= $pgw['id_pegawai'];?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-default" style="padding: 2px"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                         <?php $i++;?>
@@ -203,7 +203,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="card">
                                     <div class="body">
-                                        <form id="form_advanced_validation" method="post" action="<?= base_url();?>pegawaiuptd/edit_pegawai/<?= $pgw['id_pegawai'];?>">
+                                        <form id="form_advanced_validation" method="post" action="<?= base_url();?>pegawaiUptd/edit_pegawai/<?= $pgw['id_pegawai'];?>">
                                             
                                             <div class="form-group form-float">
                                                 <div class="form-line">

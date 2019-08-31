@@ -46,7 +46,7 @@ class PegawaiUptd extends CI_Controller {
 		}else{
 			$this->M_pegawai_uptd->tambahDataPegawai();
 			$this->session->set_flashdata('pegawai', 'Ditambahkan');
-			redirect('pegawaiuptd');
+			redirect('pegawaiUptd');
 		}
     }
     
@@ -85,7 +85,7 @@ class PegawaiUptd extends CI_Controller {
 		}else{
 			$this->M_pegawai_uptd->editDataPegawai();
 			$this->session->set_flashdata('pegawai', 'Diupdate');
-			redirect('pegawaiuptd');
+			redirect('pegawaiUptd');
 		}
 
     }
@@ -93,6 +93,6 @@ class PegawaiUptd extends CI_Controller {
     public function hapus_pegawai($id_pegawai){
         $this->M_pegawai_uptd->hapusDataPegawai($id_pegawai);
 		$this->session->set_flashdata('pegawai', 'Dihapus');
-		redirect('pegawaiuptd');
+		redirect('pegawaiUptd');
     }
 }

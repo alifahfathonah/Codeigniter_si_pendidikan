@@ -153,8 +153,11 @@
                         <li id="menu2-5">
                             <a href="<?= base_url();?>smp">Pendidikan Menengah Pertama</a>
                         </li>
-                        <li id="menu2-6">
+                        <!-- <li id="menu2-6">
                             <a href="<?= base_url();?>sma">Pendidikan Menengah Atas dan Kejuruan</a>
+                        </li> -->
+                        <li id="menu2-7">
+                            <a href="<?= base_url();?>sekolah">Data Sekolah</a>
                         </li>
                         <!-- <li id="menu2-7">
                             <a href="">Pendidikan Non-Formal</a>

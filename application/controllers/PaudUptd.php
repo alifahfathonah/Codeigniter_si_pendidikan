@@ -65,10 +65,10 @@ class PaudUptd extends CI_Controller {
             if($hasil->num_rows()<=0){
                 $this->M_paud_uptd->tambahDataPaudBaru();
                 $this->session->set_flashdata('pbu', 'Ditambahkan');
-                redirect('pauduptd');
+                redirect('paudUptd');
             }else{
                 $this->session->set_flashdata('pbu1', 'Data pada tahun tersebut sudah ada');
-                redirect('pauduptd');
+                redirect('paudUptd');
             }
         }
     }
@@ -83,7 +83,7 @@ class PaudUptd extends CI_Controller {
         }else{
             $this->M_paud_uptd->editDataPesertaPaud();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('pauduptd');
+			redirect('paudUptd');
         }
     }
     
@@ -97,7 +97,7 @@ class PaudUptd extends CI_Controller {
         }else{
             $this->M_paud_uptd->editDataBangunanPaud();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('pauduptd');
+			redirect('paudUptd');
         }
     }
     
@@ -111,14 +111,14 @@ class PaudUptd extends CI_Controller {
         }else{
             $this->M_paud_uptd->editDataPengajarPaud();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('pauduptd');
+			redirect('paudUptd');
         }
     }
 
     public function hapus_paud(){
         $this->M_paud_uptd->hapusDataPaud();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('pauduptd');
+        redirect('paudUptd');
         // echo $this->uri->segment(4);
     }
 }

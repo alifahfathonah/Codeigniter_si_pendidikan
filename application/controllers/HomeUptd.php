@@ -21,7 +21,7 @@ class HomeUptd extends CI_Controller {
 		$data['absen'] = $this->M_home_uptd->getJmlAbsen();
 
 		$this->load->view('template/headeruptd',$data);
-		$this->load->view('homeuptd',$data);
+		$this->load->view('homeUptd',$data);
 		$this->load->view('template/footeruptd');
 	}
 }

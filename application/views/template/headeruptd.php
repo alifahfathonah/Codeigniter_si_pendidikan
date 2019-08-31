@@ -136,23 +136,23 @@
                     </a>
                     <ul class="ml-menu">
                         <li id="menu2-1">
-                            <a href="<?= base_url();?>pendidikanusiauptd">Penduduk Berdasarkan Usia Sekolah</a>
+                            <a href="<?= base_url();?>pendidikanusiaUptd">Penduduk Berdasarkan Usia Sekolah</a>
                         </li>
                         <li id="menu2-2">
-                            <a href="<?= base_url();?>pauduptd">Pendidikan Anak Usia Dini</a>
+                            <a href="<?= base_url();?>paudUptd">Pendidikan Anak Usia Dini</a>
                         </li>
                         <li id="menu2-3">
-                            <a href="<?= base_url();?>tkuptd">Sekolah Taman Kanak-Kanak</a>
+                            <a href="<?= base_url();?>tkUptd">Sekolah Taman Kanak-Kanak</a>
                         </li>
 
                         <li id="menu2-4">
-                            <a href="<?= base_url();?>sduptd">Pendidikan Dasar</a>
+                            <a href="<?= base_url();?>sdUptd">Pendidikan Dasar</a>
                         </li>
                         <li id="menu2-5">
-                            <a href="<?= base_url();?>smpuptd">Pendidikan Menengah Pertama</a>
+                            <a href="<?= base_url();?>smpUptd">Pendidikan Menengah Pertama</a>
                         </li>
                         <li id="menu2-6">
-                            <a href="<?= base_url();?>smauptd">Pendidikan Menengah Atas dan Kejuruan</a>
+                            <a href="<?= base_url();?>smaUptd">Pendidikan Menengah Atas dan Kejuruan</a>
                         </li>
                         <!-- <li id="menu2-7">
                             <a href="">Pendidikan Non-Formal</a>
@@ -160,25 +160,25 @@
                     </ul>
                 </li>
                 <li id="menu3">
-                    <a href="<?= base_url();?>pegawaiuptd">
+                    <a href="<?= base_url();?>pegawaiUptd">
                         <i class="material-icons">people</i>
                         <span>Kepegawaian </span>
                     </a>
                 </li>
                 <li id="menu6">
-                    <a href="<?= base_url();?>absenuptd">
+                    <a href="<?= base_url();?>absenUptd">
                         <i class="material-icons">archive</i>
                         <span>Absen </span>
                     </a>
                 </li>
                 <li id="menu4">
-                    <a href="<?= base_url();?>konsultasiuptd">
+                    <a href="<?= base_url();?>konsultasiUptd">
                         <i class="material-icons">forum</i>
                         <span>Konsultasi </span>
                     </a>
                 </li>
                 <li id="menu5">
-                    <a href="<?= base_url();?>administratoruptd">
+                    <a href="<?= base_url();?>administratorUptd">
                         <i class="material-icons">assignment_ind</i>
                         <span>Administrator </span>
                     </a>

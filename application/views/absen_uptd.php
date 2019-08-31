@@ -24,7 +24,7 @@
                         </h2>
                         <hr>
                         <a href="" class="btn btn-primary" data-toggle="modal" data-target="#absenModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Absen Baru</a>
-                            <a href="<?= base_url();?>absenuptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
+                            <a href="<?= base_url();?>absenUptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
                         </div>
                         <div class="body">
                             <div class="table-responsive">
@@ -61,7 +61,7 @@
                                             <td><?= $d['tahun'];?></td>
                                             <td>
                                                 <a href="" class="btn btn-default" style="padding: 2px" data-toggle="modal" data-target="#editModal<?= $d['id_absen'];?>"><i class="fa fa-edit"></i></a>
-                                                <a href="<?= base_url();?>absenuptd/hapus/<?= $d['id_absen'];?>/<?= $d['gambar'];?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-default" style="padding: 2px"><i class="fa fa-trash-o"></i></a>
+                                                <a href="<?= base_url();?>absenUptd/hapus/<?= $d['id_absen'];?>/<?= $d['gambar'];?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-default" style="padding: 2px"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                         <?php 
@@ -90,7 +90,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>absenuptd/insert_absen" enctype="multipart/form-data">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>absenUptd/insert_absen" enctype="multipart/form-data">
                                     
                                     <div class="form-group form-float">
                                         <div class="form-line">
@@ -156,7 +156,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>absenuptd/updatedata" enctype="multipart/form-data">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>absenUptd/updatedata" enctype="multipart/form-data">
                                     <div class="form-group form-float">
                                         <div class="form-line">
                                         <p>Gambar</p>

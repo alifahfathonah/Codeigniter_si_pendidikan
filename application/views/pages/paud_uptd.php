@@ -14,7 +14,7 @@
                             </h2>
                             <hr>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Pendidikan Anak Usia Dini</a>
-                            <a href="<?= base_url();?>pauduptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
+                            <a href="<?= base_url();?>paudUptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
                             <hr>
                             <form method="post" action="">
                                 <div class="row clearfix">
@@ -123,7 +123,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="pauduptd/tambahDataPaud">
+                                <form id="form_advanced_validation" method="post" action="paudUptd/tambahDataPaud">
                                     <div class="form-group">
                                         <div class="form-line">
                                             <p>Kecamatan</p>
@@ -219,7 +219,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edit<?= $p['id_paud'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>pauduptd/hapus_paud/<?= $p['id_paud'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>paudUptd/hapus_paud/<?= $p['id_paud'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -253,7 +253,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pauduptd/edit_peserta_paud">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>paudUptd/edit_peserta_paud">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_paud'];?>" name="id_paud" required>
                                     <input type="hidden" class="form-control" value="<?= $p['nama_kecamatan'];?>" name="nama_kecamatan" required>
@@ -361,7 +361,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pauduptd/edit_bangunan_paud">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>paudUptd/edit_bangunan_paud">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_paud'];?>" name="id_paud" required>
                                     <input type="hidden" class="form-control" value="<?= $p['nama_kecamatan'];?>" name="nama_kecamatan" required>
@@ -434,7 +434,7 @@
                                             <td>
                                                 <b style="float: right;">
                                                     <a href="" class="btn btn-default" data-toggle="modal" data-target="#edit<?= $p['id_paud'];?>"><i class="fa fa-edit"></i></a>
-                                                    <a href="<?= base_url();?>pauduptd/hapus_paud/<?= $p['id_paud'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= base_url();?>paudUptd/hapus_paud/<?= $p['id_paud'];?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
                                                 </b>
                                             </td>
                                         </tr>
@@ -468,7 +468,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>pauduptd/edit_pengajar_paud">
+                                <form id="form_advanced_validation" method="post" action="<?= base_url();?>paudUptd/edit_pengajar_paud">
                                     <input type="hidden" class="form-control" value="<?= $p['tahun'];?>" name="tahun" required>
                                     <input type="hidden" class="form-control" value="<?= $p['id_paud'];?>" name="id_paud" required>
                                     <input type="hidden" class="form-control" value="<?= $p['nama_kecamatan'];?>" name="nama_kecamatan" required>

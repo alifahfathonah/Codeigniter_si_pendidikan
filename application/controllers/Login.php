@@ -43,7 +43,7 @@ class Login extends CI_Controller {
                         'logged_in_admin_uptd' => true
                     ];
                     $this->session->set_userdata($sesdata);
-                    redirect('homeuptd');
+                    redirect('homeUptd');
                 }
             }else{
                 // $this->session->set_flashdata('msg','Username or Password is Wrong');

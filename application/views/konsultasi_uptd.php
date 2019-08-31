@@ -11,7 +11,7 @@
         <?php endif;?>
         <hr>
         <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Kirim Konsultasi Baru</a>
-        <a href="<?= base_url();?>konsultasiuptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
+        <a href="<?= base_url();?>konsultasiUptd" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
         <hr>
         <div class="row clearfix">
             <?php foreach($pesan as $pes):?>
@@ -37,7 +37,7 @@
                                 <i class="material-icons">more_vert</i>
                             </a>
                             <ul class="dropdown-menu pull-right">
-                                <li><a href="<?= base_url();?>konsultasiuptd/hapus/<?= $pes['id_konsultasi'];?>">Hapus Pesan</a></li>
+                                <li><a href="<?= base_url();?>konsultasiUptd/hapus/<?= $pes['id_konsultasi'];?>">Hapus Pesan</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -66,7 +66,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="body">
-                                <form id="form_advanced_validation" method="post" action="konsultasiuptd/kirim">
+                                <form id="form_advanced_validation" method="post" action="konsultasiUptd/kirim">
                                     <div class="form-group form-float">
                                         <div class="form-line">
                                             <input type="text" class="form-control" name="judul_konsultasi" required>

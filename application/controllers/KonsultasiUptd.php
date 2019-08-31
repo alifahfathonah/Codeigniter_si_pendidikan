@@ -30,13 +30,13 @@ class KonsultasiUptd extends CI_Controller {
 		}else{
             $this->M_konsultasi_uptd->kirimDataKonsultasi();
             $this->session->set_flashdata('konsultasi', 'Ditanggapi');
-            redirect('konsultasiuptd');
+            redirect('konsultasiUptd');
 		}
     }
     
     public function hapus(){
         $this->M_konsultasi_uptd->hapusDataKonsultasi();
         $this->session->set_flashdata('konsultasi', 'Ditanggapi');
-        redirect('konsultasiuptd');
+        redirect('konsultasiUptd');
     }
 }

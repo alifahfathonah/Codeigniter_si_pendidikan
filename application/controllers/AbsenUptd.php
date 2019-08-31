@@ -50,7 +50,7 @@ class AbsenUptd extends CI_Controller {
                     ];
                     $this->M_absen_uptd->insert($data);
                     $this->session->set_flashdata('absen', 'Ditambahkan');
-                    redirect('absenuptd');
+                    redirect('absenUptd');
                 }else {
                     die("gagal upload");
                 }
@@ -86,7 +86,7 @@ class AbsenUptd extends CI_Controller {
                 @unlink($path.$this->input->post('filelama'));
                 $this->M_absen_uptd->update($data,$kondisi);
                 $this->session->set_flashdata('absen', 'Diupdate');
-                redirect('absenuptd');
+                redirect('absenUptd');
             }else {
                 die("gagal update");
             }
@@ -98,7 +98,7 @@ class AbsenUptd extends CI_Controller {
             ];
             $this->M_absen_uptd->update($data,$kondisi);
             $this->session->set_flashdata('absen', 'Diupdate');
-            redirect('absenuptd');
+            redirect('absenUptd');
         }
     }
 
@@ -108,7 +108,7 @@ class AbsenUptd extends CI_Controller {
         $where = array('id_absen' => $id );
         $this->M_absen_uptd->delete($where);
         $this->session->set_flashdata('absen', 'Dihapus');
-        return redirect('absenuptd');
+        return redirect('absenUptd');
     }
 
     // public function getSekolahKecamatan(){

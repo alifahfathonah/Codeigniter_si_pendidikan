@@ -16,7 +16,7 @@ class Administrator extends CI_Controller {
     public function index(){
         $data['sidebar']='#menu5';
         $data['sidebar1']='';   
-        $data['level']=['admin','kadis','uptd'];
+        $data['level']=['admin','kadis'];
         $this->form_validation->set_rules('username', 'Username', 'required|xss_clean|trim');
         $this->form_validation->set_rules('password', 'Password', 'required|xss_clean|trim');
         $this->form_validation->set_rules('level', 'Level', 'required|xss_clean|trim');

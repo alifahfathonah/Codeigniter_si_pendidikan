@@ -314,4 +314,15 @@ class Kadis extends CI_Controller {
 		$this->load->view('kadis_sma',$data);
 		$this->load->view('template/footerkadis');
     }
+
+    public function sekolah(){
+        $this->load->model('M_sekolah');
+        $data['sidebar']='#menu2';
+        $data['sidebar1']='#menu2-7';
+        $data['sekolah']=$this->M_sekolah->getAllSekolah();
+        $this->load->view('template/headerkadis', $data);
+        $this->load->view('kadis_sekolah', $data);
+        $this->load->view('template/footerkadis');
+        
+    }
 }

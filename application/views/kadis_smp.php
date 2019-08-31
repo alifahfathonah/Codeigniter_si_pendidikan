@@ -13,9 +13,6 @@
                                 <!-- <small>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</small> -->
                             </h2>
                             <hr>
-                            <a href="" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal" style="padding: 10px;"><i class="fa fa-plus-square"></i> Tambah Data Pendidikan Menengah Pertama</a>
-                            <a href="<?= base_url();?>smp" class="btn btn-success" style="padding: 10px; margin-right: 25px;"><i class="fa fa-refresh"></i></a>
-                            <hr>
                             <form method="post" action="">
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
@@ -39,23 +36,6 @@
                         <div class="body table-responsive">
                             <h4> Data Pendidikan Menengah Pertama di Tahun <?= $sort;?> </h4>   
                         <hr>
-                        <?php if($this->session->flashdata('pbu')):?>
-                            <div class="alert alert-success alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            Data <strong>berhasil</strong> <?= $this->session->flashdata('pbu');?>
-                            </div>
-                        <?php endif;?>
-                        <?php if($this->session->flashdata('pbu1')):?>
-                            <div class="alert alert-danger alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <?= $this->session->flashdata('pbu1');?>
-                            </div>
-                        <?php endif;?>
-                        <?php if(validation_errors()):?>
-                        <div class="alert alert-danger" role="alert">
-                            <?= validation_errors();?>
-                        </div>
-                        <?php endif;?>
                         <table class="table table-bordered">
                             <thead>
                                 <tr></tr>

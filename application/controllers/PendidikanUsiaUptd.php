@@ -70,10 +70,10 @@ class PendidikanUsiaUptd extends CI_Controller {
             if($hasil->num_rows()<=0){
                 $this->M_pendidikan_usia_uptd->tambahDataPendidikanUsia();
                 $this->session->set_flashdata('pbu', 'Ditambahkan');
-                redirect('pendidikanusiauptd');
+                redirect('pendidikanUsiaUptd');
             }else{
                 $this->session->set_flashdata('pbu1', 'Data pada tahun dan usia tersebut sudah ada');
-                redirect('pendidikanusiauptd');
+                redirect('pendidikanUsiaUptd');
             }
         }
     }
@@ -88,7 +88,7 @@ class PendidikanUsiaUptd extends CI_Controller {
         }else{
             $this->M_pendidikan_usia_uptd->editDataPBU0_6();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('pendidikanusiauptd');
+			redirect('pendidikanUsiaUptd');
         }
     }
 
@@ -102,7 +102,7 @@ class PendidikanUsiaUptd extends CI_Controller {
         }else{
             $this->M_pendidikan_usia_uptd->editDataPBU7_12();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('pendidikanusiauptd');
+			redirect('pendidikanUsiaUptd');
         }
     }
     
@@ -116,7 +116,7 @@ class PendidikanUsiaUptd extends CI_Controller {
         }else{
             $this->M_pendidikan_usia_uptd->editDataPBU13_15();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('pendidikanusiauptd');
+			redirect('pendidikanUsiaUptd');
         }
     }
     
@@ -130,14 +130,14 @@ class PendidikanUsiaUptd extends CI_Controller {
         }else{
             $this->M_pendidikan_usia_uptd->editDataPBU16_18();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('pendidikanusiauptd');
+			redirect('pendidikanUsiaUptd');
         }
     }
 
     public function hapus_pendidikan_usia(){
         $this->M_pendidikan_usia_uptd->hapusDataPBU();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('pendidikanusiauptd');
+        redirect('pendidikanUsiaUptd');
         // echo $this->uri->segment(4);
     }
 }

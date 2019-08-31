@@ -84,7 +84,7 @@ class SdUptd extends CI_Controller {
         }else{
             $this->M_sd_uptd->editDataPesertaSiswa();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('sduptd');
+			redirect('sdUptd');
         }
     }
     
@@ -98,7 +98,7 @@ class SdUptd extends CI_Controller {
         }else{
             $this->M_sd_uptd->editDataBgBaik();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('sduptd');
+			redirect('sdUptd');
         }
     }
     
@@ -112,7 +112,7 @@ class SdUptd extends CI_Controller {
         }else{
             $this->M_sd_uptd->editDataBgTdkBaik();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('sduptd');
+			redirect('sdUptd');
         }
     }
     
@@ -125,7 +125,7 @@ class SdUptd extends CI_Controller {
         }else{
             $this->M_sd_uptd->editDataPglNegeri();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('sduptd');
+			redirect('sdUptd');
         }
     }
     
@@ -138,7 +138,7 @@ class SdUptd extends CI_Controller {
         }else{
             $this->M_sd_uptd->editDataPglSwasta();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('sduptd');
+			redirect('sdUptd');
         }
     }
     
@@ -151,7 +151,7 @@ class SdUptd extends CI_Controller {
         }else{
             $this->M_sd_uptd->editDataRgKelas();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('sduptd');
+			redirect('sdUptd');
         }
     }
     
@@ -164,7 +164,7 @@ class SdUptd extends CI_Controller {
         }else{
             $this->M_sd_uptd->editDataPdBersertifikat();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('sduptd');
+			redirect('sdUptd');
         }
     }
     
@@ -177,7 +177,7 @@ class SdUptd extends CI_Controller {
         }else{
             $this->M_sd_uptd->editDataPdTdkBersertifikat();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('sduptd');
+			redirect('sdUptd');
         }
     }
     
@@ -190,7 +190,7 @@ class SdUptd extends CI_Controller {
         }else{
             $this->M_sd_uptd->editDataRasio();
             $this->session->set_flashdata('pbu', 'Diupdate');
-			redirect('sduptd');
+			redirect('sdUptd');
         }
     }
 
@@ -225,17 +225,17 @@ class SdUptd extends CI_Controller {
             
             if($hasil->num_rows()!=0){
                 $this->session->set_flashdata('pbu1', 'Data siswa pada tahun tersebut sudah ada');
-                redirect('sduptd');
+                redirect('sdUptd');
             }else if($hasil1->num_rows()!=0){
                 $this->session->set_flashdata('pbu1', 'Data bangunan baik pada tahun tersebut sudah ada');
-                redirect('sduptd');
+                redirect('sdUptd');
             }else if($hasil2->num_rows()!=0){
                 $this->session->set_flashdata('pbu1', 'Data bangunan tidak baik pada tahun tersebut sudah ada');
-                redirect('sduptd');
+                redirect('sdUptd');
             }else{
                 $this->M_sd_uptd->tambahDataSdBaru();
                 $this->session->set_flashdata('pbu', 'Ditambahkan');
-                redirect('sduptd');
+                redirect('sdUptd');
                 // echo 'ok';
             }
         }
@@ -279,26 +279,26 @@ class SdUptd extends CI_Controller {
             
             if($hasil3->num_rows()!=0){
                 $this->session->set_flashdata('pbu1', 'Data pengelola sekolah negeri pada tahun tersebut sudah ada');
-                redirect('sduptd');
+                redirect('sdUptd');
             }else if($hasil4->num_rows()!=0){
                 $this->session->set_flashdata('pbu1', 'Data pengelola sekolah swasta pada tahun tersebut sudah ada');
-                redirect('sduptd');
+                redirect('sdUptd');
             }else if($hasil5->num_rows()!=0){
                 $this->session->set_flashdata('pbu1', 'Data ruang kelas pada tahun tersebut sudah ada');
-                redirect('sduptd');
+                redirect('sdUptd');
             }else if($hasil6->num_rows()!=0){
                 $this->session->set_flashdata('pbu1', 'Data tenaga pendidik bersertifikat pada tahun tersebut sudah ada');
-                redirect('sduptd');
+                redirect('sdUptd');
             }else if($hasil7->num_rows()!=0){
                 $this->session->set_flashdata('pbu1', 'Data tenaga pendidik tidak bersertifikat pada tahun tersebut sudah ada');
-                redirect('sduptd');
+                redirect('sdUptd');
             }else if($hasil8->num_rows()!=0){
                 $this->session->set_flashdata('pbu1', 'Data rasio pada tahun tersebut sudah ada');
-                redirect('sduptd');
+                redirect('sdUptd');
             }else{
                 $this->M_sd_uptd->tambahDatasdUmumBaru();
                 $this->session->set_flashdata('pbu', 'Ditambahkan');
-                redirect('sduptd');
+                redirect('sdUptd');
             }
         }
     }
@@ -306,63 +306,63 @@ class SdUptd extends CI_Controller {
     public function hapus_siswa(){
         $this->M_sd_uptd->hapusDataSiswa();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('sduptd');
+        redirect('sdUptd');
         // echo $this->uri->segment(4);
     }
     
     public function hapus_bg_baik(){
         $this->M_sd_uptd->hapusBgBaik();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('sduptd');
+        redirect('sdUptd');
         // echo $this->uri->segment(4);
     }
     
     public function hapus_bg_tdk_baik(){
         $this->M_sd_uptd->hapusBgTdkBaik();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('sduptd');
+        redirect('sdUptd');
         // echo $this->uri->segment(4);
     }
     
     public function hapus_pgl_negeri(){
         $this->M_sd_uptd->hapusPglNegeri();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('sduptd');
+        redirect('sdUptd');
         // echo $this->uri->segment(4);
     }
     
     public function hapus_pgl_swasta(){
         $this->M_sd_uptd->hapusPglSwasta();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('sduptd');
+        redirect('sdUptd');
         // echo $this->uri->segment(4);
     }
     
     public function hapus_rg_kelas(){
         $this->M_sd_uptd->hapusRgKelas();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('sduptd');
+        redirect('sdUptd');
         // echo $this->uri->segment(4);
     }
     
     public function hapus_pd_bersertifikat(){
         $this->M_sd_uptd->hapusPdBersertifikat();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('sduptd');
+        redirect('sdUptd');
         // echo $this->uri->segment(4);
     }
     
     public function hapus_pd_tdk_bersertifikat(){
         $this->M_sd_uptd->hapusPdTdkBersertifikat();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('sduptd');
+        redirect('sdUptd');
         // echo $this->uri->segment(4);
     }
     
     public function hapus_rasio(){
         $this->M_sd_uptd->hapusRasio();
 		$this->session->set_flashdata('pbu', 'Dihapus');
-        redirect('sduptd');
+        redirect('sdUptd');
         // echo $this->uri->segment(4);
     }
 }
